@@ -52,7 +52,7 @@ python3 -m http.server 8000
 
 - Reines HTML5, CSS3 und Vanilla JavaScript – keine Frameworks, keine Build-Tools
 - Responsives Layout (Desktop, Tablet, Mobil)
-- Schriften: *Cormorant Garamond* & *Jost* (Google Fonts)
+- Schriften: *Bodoni Moda* & *Archivo* (Google Fonts)
 - Strukturierte Daten (schema.org `IceCreamShop`) für Suchmaschinen
 - Berücksichtigt `prefers-reduced-motion`
 
