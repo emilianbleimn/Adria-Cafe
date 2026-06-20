@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Eiscafé Adria · Erbach im Odenwald — Hausgemachtes italienisches Eis</title>
   <meta name="description" content="Eiscafé Adria in Erbach im Odenwald: hausgemachte italienische Eisspezialitäten, Kuchen & Torten, Waffeln, Crêpes, Frühstück sowie Pizza & Pasta. Familienbetrieb mit sonniger Terrasse. Werner-von-Siemens-Straße 8, 64711 Erbach." />
-  <meta name="theme-color" content="#0e4d5c" />
+  <meta name="theme-color" content="#3a2114" />
   <meta property="og:title" content="Eiscafé Adria · Erbach im Odenwald" />
   <meta property="og:description" content="Hausgemachte italienische Eisspezialitäten, Kuchen, Waffeln & mediterrane Küche – ein Familienbetrieb im Herzen des Odenwalds." />
   <meta property="og:type" content="restaurant" />
@@ -13,7 +13,7 @@
 
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;0,9..144,700;0,9..144,900;1,9..144,400;1,9..144,500;1,9..144,600&family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,700&display=swap" rel="stylesheet" />
 
   <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
   <link rel="stylesheet" href="css/style.css" />
@@ -54,6 +54,9 @@
   </script>
 </head>
 <body>
+
+  <!-- ============ AWNING ============ -->
+  <div class="awning" aria-hidden="true"></div>
 
   <!-- ============ TOP BAR ============ -->
   <div class="topbar">
@@ -141,11 +144,31 @@
                width="760" height="900" loading="eager" decoding="async" />
           <figcaption class="hero__photo-tag">Gelato artigianale</figcaption>
         </figure>
+
+        <div class="seal" aria-hidden="true">
+          <svg viewBox="0 0 200 200" class="seal__svg">
+            <defs>
+              <path id="sealTop" d="M38 100a62 62 0 0 1 124 0" />
+              <path id="sealBottom" d="M161 100a61 61 0 0 1 -122 0" />
+            </defs>
+            <circle cx="100" cy="100" r="95" class="seal__edge" />
+            <circle cx="100" cy="100" r="86" class="seal__edge2" />
+            <text class="seal__top"><textPath href="#sealTop" startOffset="50%">EISCAFÉ ADRIA</textPath></text>
+            <text class="seal__bottom"><textPath href="#sealBottom" startOffset="50%">ERBACH · ODENWALD</textPath></text>
+            <text class="seal__star" x="100" y="150">✦</text>
+            <text class="seal__star" x="50" y="104">✦</text>
+            <text class="seal__star" x="150" y="104">✦</text>
+            <path class="seal__drop" d="M100 62c-9 0-16 6-16 14 0 5 3 9 7 13l9 19 9-19c4-4 7-8 7-13 0-8-7-14-16-14z" />
+            <circle cx="100" cy="74" r="4.4" class="seal__dropdot" />
+            <text class="seal__c1" x="100" y="126">Gelato</text>
+            <text class="seal__c2" x="100" y="138">ARTIGIANALE</text>
+          </svg>
+        </div>
       </div>
     </div>
 
     <div class="hero__wave" aria-hidden="true">
-      <svg viewBox="0 0 1440 90" preserveAspectRatio="none"><path d="M0 60 C 240 90 480 20 720 40 C 960 60 1200 95 1440 55 L1440 90 L0 90 Z" fill="var(--cream)"/></svg>
+      <svg viewBox="0 0 1440 64" preserveAspectRatio="none"><path d="M0 34 a60 30 0 0 1 120 0 a60 30 0 0 1 120 0 a60 30 0 0 1 120 0 a60 30 0 0 1 120 0 a60 30 0 0 1 120 0 a60 30 0 0 1 120 0 a60 30 0 0 1 120 0 a60 30 0 0 1 120 0 a60 30 0 0 1 120 0 a60 30 0 0 1 120 0 a60 30 0 0 1 120 0 a60 30 0 0 1 120 0 L1440 64 L0 64 Z" fill="var(--cream)"/></svg>
     </div>
   </section>
 

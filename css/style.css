@@ -4,37 +4,40 @@
    =================================================================== */
 
 :root {
-  /* Palette */
-  --ink:        #16252b;
-  --ink-soft:   #3a4a50;
-  --sea:        #0e4d5c;
-  --sea-deep:   #0a3a45;
-  --sea-light:  #2a7d8c;
-  --gold:       #c19a4b;
-  --gold-light: #d8b86a;
-  --gold-soft:  #e7d4a8;
-  --cream:      #faf6ee;
-  --cream-2:    #f4ecdd;
-  --sand:       #ebe0cc;
-  --line:       #e3d8c4;
+  /* Palette — warm Italian gelateria */
+  --ink:        #2f1d12;   /* espresso text          */
+  --ink-soft:   #6a4d3a;   /* milky coffee           */
+  --sea:        #4a2c1a;   /* dark chocolate (dark surfaces) */
+  --sea-deep:   #3a2114;   /* espresso               */
+  --sea-light:  #7a4f30;   /* hazelnut / caramel-brown */
+  --gold:       #c2853f;   /* caramel / amber        */
+  --gold-light: #e0a766;   /* light caramel          */
+  --gold-soft:  #ecd3a6;   /* butter                 */
+  --cream:      #fbf4e8;   /* panna                  */
+  --cream-2:    #f5e9d4;   /* warm sand              */
+  --sand:       #ecdcc0;
+  --line:       #e8d8bd;
   --white:      #ffffff;
 
   /* Gelato accents */
-  --pistachio:  #a6c47e;
-  --strawberry: #d98a76;
-  --vanilla:    #ecd9a6;
+  --pistachio:   #8aa86b;
+  --pistachio-d: #5f7a45;
+  --strawberry:  #cf5f72;  /* raspberry */
+  --raspberry:   #cf5f72;
+  --raspberry-d: #b14a5d;
+  --vanilla:     #f0d9a8;
 
   /* Type */
-  --serif: "Cormorant Garamond", Georgia, "Times New Roman", serif;
-  --sans:  "Jost", -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  --serif: "Fraunces", Georgia, "Times New Roman", serif;
+  --sans:  "DM Sans", -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
 
   /* Layout */
   --container: 1180px;
-  --radius: 14px;
-  --radius-sm: 9px;
-  --shadow-sm: 0 6px 20px rgba(16, 37, 43, 0.06);
-  --shadow:    0 18px 50px rgba(16, 37, 43, 0.12);
-  --shadow-lg: 0 30px 80px rgba(10, 58, 69, 0.22);
+  --radius: 16px;
+  --radius-sm: 10px;
+  --shadow-sm: 0 6px 20px rgba(74, 44, 26, 0.08);
+  --shadow:    0 18px 50px rgba(58, 33, 20, 0.14);
+  --shadow-lg: 0 30px 80px rgba(45, 25, 14, 0.24);
   --ease: cubic-bezier(0.22, 0.61, 0.36, 1);
 }
 
@@ -223,7 +226,7 @@ a.topbar__item:hover { color: var(--white); }
    =================================================================== */
 .hero {
   position: relative;
-  background: linear-gradient(150deg, #0c4250 0%, var(--sea-deep) 55%, #072c35 100%);
+  background: linear-gradient(155deg, #6e4524 0%, var(--sea) 50%, #341d10 100%);
   color: var(--cream);
   overflow: hidden;
   isolation: isolate;
@@ -233,8 +236,8 @@ a.topbar__item:hover { color: var(--white); }
   content: "";
   position: absolute; inset: 0;
   background-image:
-    radial-gradient(circle at 80% 18%, rgba(216, 184, 106, 0.18), transparent 42%),
-    radial-gradient(circle at 12% 85%, rgba(42, 125, 140, 0.4), transparent 45%);
+    radial-gradient(circle at 80% 18%, rgba(224, 167, 102, 0.22), transparent 42%),
+    radial-gradient(circle at 12% 85%, rgba(207, 95, 114, 0.20), transparent 46%);
 }
 .hero__bg::after {
   content: "";
@@ -248,7 +251,7 @@ a.topbar__item:hover { color: var(--white); }
   position: absolute;
   width: 520px; height: 520px;
   right: -80px; top: -120px;
-  background: radial-gradient(circle, rgba(216,184,106,0.22), transparent 65%);
+  background: radial-gradient(circle, rgba(224,167,102,0.24), transparent 65%);
   border-radius: 50%;
   filter: blur(8px);
 }
@@ -453,8 +456,8 @@ a.topbar__item:hover { color: var(--white); }
 .menu {
   padding: clamp(3.5rem, 7vw, 7rem) 0;
   background:
-    radial-gradient(circle at 85% 10%, rgba(42,125,140,0.4), transparent 40%),
-    linear-gradient(155deg, #0c4250, var(--sea-deep) 60%, #072c35);
+    radial-gradient(circle at 85% 10%, rgba(138,168,107,0.28), transparent 40%),
+    linear-gradient(155deg, #4a2c1a, var(--sea-deep) 60%, #2a1710);
   color: var(--cream);
   position: relative;
 }
@@ -608,7 +611,7 @@ a.topbar__item:hover { color: var(--white); }
    =================================================================== */
 .contact {
   padding: clamp(3.5rem, 7vw, 7rem) 0;
-  background: linear-gradient(160deg, var(--sea-deep), #082f38);
+  background: linear-gradient(160deg, var(--sea-deep), #2a1710);
   color: var(--cream);
 }
 .contact__grid {
@@ -672,7 +675,7 @@ a.topbar__item:hover { color: var(--white); }
 /* ===================================================================
    FOOTER
    =================================================================== */
-.site-footer { background: #061f26; color: rgba(250,246,238,0.65); padding-top: 3.6rem; }
+.site-footer { background: #241307; color: rgba(251,244,232,0.66); padding-top: 3.6rem; }
 .site-footer__inner {
   display: grid;
   grid-template-columns: 1.4fr 1fr 1fr;
@@ -801,8 +804,134 @@ a.topbar__item:hover { color: var(--white); }
 /* ===================================================================
    MOTION PREFERENCES
    =================================================================== */
+/* ===================================================================
+   GELATERIA — distinctive warm identity layer
+   (terrazzo · awning · scallops · vintage seal · gelato-tricolor)
+   =================================================================== */
+
+body { font-weight: 400; font-optical-sizing: auto; }
+.hero__lead { font-weight: 400; }
+.hours th, .hours td { font-weight: 400; }
+
+.brand__name { font-weight: 700; letter-spacing: -0.01em; }
+.hero__title { font-weight: 700; }
+.section-title { font-weight: 600; }
+.section-title em { color: var(--raspberry); font-weight: 600; }
+.eyebrow { color: var(--raspberry); }
+.eyebrow--light { color: var(--vanilla); }
+
+/* ---- Awning: striped, scalloped valance across the very top ---- */
+.awning {
+  height: 20px;
+  background: repeating-linear-gradient(90deg, var(--raspberry) 0 26px, #fbeede 26px 52px);
+  -webkit-mask: radial-gradient(circle at 50% 100%, transparent 9px, #000 9.5px) 0 0 / 26px 100% repeat-x;
+          mask: radial-gradient(circle at 50% 100%, transparent 9px, #000 9.5px) 0 0 / 26px 100% repeat-x;
+}
+
+/* ---- Terrazzo speckle (gelateria floor) on warm light sections ---- */
+.highlights, .gallery, .erbach { position: relative; }
+.highlights, .erbach {
+  background-color: var(--cream-2);
+  background-image:
+    radial-gradient(circle at 12% 22%, rgba(138,168,107,0.30) 0 3px, transparent 3.5px),
+    radial-gradient(circle at 82% 16%, rgba(207,95,114,0.26) 0 2.5px, transparent 3px),
+    radial-gradient(circle at 33% 70%, rgba(194,133,63,0.30) 0 2px, transparent 2.5px),
+    radial-gradient(circle at 64% 84%, rgba(138,168,107,0.26) 0 2.5px, transparent 3px),
+    radial-gradient(circle at 90% 60%, rgba(207,95,114,0.24) 0 2px, transparent 2.5px),
+    radial-gradient(circle at 48% 40%, rgba(194,133,63,0.24) 0 2px, transparent 2.5px),
+    radial-gradient(circle at 22% 90%, rgba(138,168,107,0.22) 0 2px, transparent 2.5px);
+  background-size: 210px 210px;
+}
+.highlights { background-color: var(--cream); }
+
+/* ---- Centered section heads: little gelato-tricolor underline ---- */
+.section-head .section-title { position: relative; }
+.section-head .section-title::after {
+  content: "";
+  display: block;
+  width: 70px; height: 4px;
+  margin: 1rem auto 0;
+  border-radius: 4px;
+  background: linear-gradient(90deg, var(--pistachio) 0 34%, var(--vanilla) 34% 66%, var(--raspberry) 66% 100%);
+}
+
+/* ---- Buttons & nav: warm caramel + berry pop ---- */
+.btn--gold { background: var(--gold); box-shadow: 0 10px 24px rgba(194,133,63,0.32); }
+.btn--gold:hover { background: var(--gold-light); box-shadow: 0 14px 30px rgba(194,133,63,0.42); }
+.nav__cta:hover { background: var(--raspberry); }
+
+/* ---- Highlights: pastel gelato icon tiles ---- */
+.highlight:nth-child(1) .highlight__icon { background: rgba(138,168,107,0.18); color: var(--pistachio-d); }
+.highlight:nth-child(2) .highlight__icon { background: rgba(207,95,114,0.16); color: var(--raspberry-d); }
+.highlight:nth-child(3) .highlight__icon { background: rgba(194,133,63,0.18); color: #9a6326; }
+.highlight:nth-child(4) .highlight__icon { background: rgba(138,168,107,0.18); color: var(--pistachio-d); }
+
+/* ---- Spec cards: gelato-tricolor bars + pastel icon tiles ---- */
+.spec-card:nth-child(3n+1)::before { background: var(--pistachio); }
+.spec-card:nth-child(3n+2)::before { background: var(--raspberry); }
+.spec-card:nth-child(3n+3)::before { background: var(--gold); }
+.spec-card:hover { border-color: var(--gold-soft); }
+.spec-card:nth-child(3n+1) .spec-card__icon { background: var(--pistachio); color: #fff; }
+.spec-card:nth-child(3n+2) .spec-card__icon { background: var(--raspberry); color: #fff; }
+.spec-card:nth-child(3n+3) .spec-card__icon { background: var(--sea-light); color: var(--vanilla); }
+.spec-card:hover .spec-card__icon { filter: brightness(1.06); }
+
+/* ---- Story: tilted "pinned" photo + raspberry badge ---- */
+.story__frame { border-color: #fff; transform: rotate(-1.4deg); transition: transform 0.5s var(--ease); }
+.story__frame:hover { transform: rotate(0deg); }
+.story__badge { background: var(--raspberry); }
+.story__list svg { color: var(--pistachio-d); }
+
+/* ---- Menu: butter-toned categories & prices ---- */
+.menu__cat { color: var(--vanilla); }
+.m-price { color: var(--gold-light); }
+
+/* ---- Footer accent ---- */
+.site-footer__brand .brand__sub { color: var(--gold-light); }
+
+/* ===================================================================
+   VINTAGE SEAL — hero stamp
+   =================================================================== */
+.hero__art { position: relative; }
+.seal {
+  position: absolute;
+  left: 0; bottom: -24px;
+  width: 134px; height: 134px;
+  border-radius: 50%;
+  background: var(--raspberry);
+  color: var(--cream);
+  display: grid; place-items: center;
+  box-shadow: var(--shadow), inset 0 0 0 4px rgba(255, 255, 255, 0.14);
+  transform: rotate(-9deg);
+  z-index: 6;
+}
+.seal__svg { width: 100%; height: 100%; overflow: visible; }
+.seal__edge  { fill: none; stroke: currentColor; stroke-width: 2; opacity: 0.85; }
+.seal__edge2 { fill: none; stroke: currentColor; stroke-width: 1; stroke-dasharray: 1 5; opacity: 0.55; }
+.seal__top, .seal__bottom {
+  fill: currentColor; text-anchor: middle;
+  font-family: var(--sans); font-weight: 700; letter-spacing: 2px;
+}
+.seal__top { font-size: 16px; }
+.seal__bottom { font-size: 12px; }
+.seal__star { fill: currentColor; text-anchor: middle; font-size: 11px; opacity: 0.9; }
+.seal__drop { fill: currentColor; }
+.seal__dropdot { fill: var(--raspberry); }
+.seal__c1 { fill: currentColor; text-anchor: middle; font-family: var(--serif); font-style: italic; font-weight: 600; font-size: 18px; }
+.seal__c2 { fill: currentColor; text-anchor: middle; font-family: var(--sans); font-weight: 500; font-size: 9px; letter-spacing: 3px; }
+
+@media (max-width: 860px) {
+  .seal { left: auto; right: -6px; bottom: -18px; width: 116px; height: 116px; }
+}
+@media (max-width: 560px) {
+  .seal { width: 98px; height: 98px; right: 4px; bottom: -14px; }
+}
+
+/* ===================================================================
+   MOTION PREFERENCES
+   =================================================================== */
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after { animation-duration: 0.001ms !important; transition-duration: 0.001ms !important; scroll-behavior: auto !important; }
   .reveal { opacity: 1; transform: none; }
-  .sundae { animation: none; }
+  .hero__photo { animation: none; }
 }
