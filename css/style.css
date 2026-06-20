@@ -177,18 +177,10 @@ a.topbar__item:hover { color: var(--ivory); }
   justify-content: space-between;
 }
 .brand { display: inline-flex; align-items: center; gap: 0.85rem; color: var(--ivory); }
-.brand__mark {
-  width: 44px; height: 44px;
-  display: grid; place-items: center;
-  border: 1px solid var(--brass);
-  border-radius: 50%;
-  font-family: var(--display);
-  font-weight: 600;
-  font-size: 1.4rem;
-  color: var(--brass-2);
-  transition: background 0.4s, color 0.4s;
-}
-.brand:hover .brand__mark { background: var(--brass); color: var(--espresso); }
+.brand__mark { width: 44px; height: 54px; object-fit: contain; filter: drop-shadow(0 3px 8px rgba(0,0,0,0.35)); transition: transform 0.4s var(--ease); }
+.brand:hover .brand__mark { transform: translateY(-1px) scale(1.04); }
+.hero__crest { width: clamp(66px, 8vw, 90px); height: auto; margin-bottom: 1.5rem; filter: drop-shadow(0 8px 18px rgba(0,0,0,0.4)); }
+.site-footer__brand .crest { width: 58px; height: auto; margin-bottom: 1.1rem; filter: drop-shadow(0 3px 8px rgba(0,0,0,0.4)); }
 .brand__word { display: flex; flex-direction: column; line-height: 1; }
 .brand__name {
   font-family: var(--display);
