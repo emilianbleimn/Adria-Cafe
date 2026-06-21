@@ -4,29 +4,31 @@
    =================================================================== */
 
 :root {
-  /* Dark surfaces */
-  --espresso:   #17120f;
-  --espresso-2: #1f1813;
-  --coffee:     #271e18;
+  /* Warm dark surfaces (brown) */
+  --espresso:   #3a2417;
+  --espresso-2: #43291a;
+  --coffee:     #2e1d12;
 
-  /* Accents */
-  --bordeaux:   #7c2433;
-  --bordeaux-2: #97303f;
-  --brass:      #b7965a;
-  --brass-2:    #cdac6e;
-  --brass-3:    #e0c990;
+  /* Italian accents */
+  --bordeaux:   #a8362b;   /* warm Italian red */
+  --bordeaux-2: #c0473a;
+  --green:      #426b39;   /* olive / Italian green */
+  --green-2:    #557e49;
+  --brass:      #c2922f;   /* sunny ochre / gold */
+  --brass-2:    #d8aa4e;
+  --brass-3:    #eccb82;
 
   /* Light & neutrals */
-  --ivory:      #f4eee4;
-  --cream:      #faf6ef;
-  --cream-2:    #f1e9da;
-  --ink:        #20180f;   /* text on light */
-  --stone:      #6c6055;   /* muted on light */
-  --stone-2:    #9c8e7d;
+  --ivory:      #f7f0e2;
+  --cream:      #fbf6ec;
+  --cream-2:    #f3ead7;
+  --ink:        #2f2013;   /* warm brown text on light */
+  --stone:      #6f5c47;   /* muted on light */
+  --stone-2:    #9a876f;
 
   /* Hairlines */
-  --line-l:     rgba(32, 24, 15, 0.14);
-  --line-d:     rgba(244, 238, 228, 0.16);
+  --line-l:     rgba(47, 32, 19, 0.15);
+  --line-d:     rgba(247, 240, 226, 0.16);
 
   /* Type */
   --display: "Bodoni Moda", Georgia, "Times New Roman", serif;
@@ -34,7 +36,7 @@
 
   --container: 1220px;
   --ease: cubic-bezier(0.22, 0.61, 0.36, 1);
-  --shadow: 0 30px 70px rgba(15, 10, 7, 0.30);
+  --shadow: 0 30px 70px rgba(30, 18, 10, 0.28);
 }
 
 /* ---------- Reset ---------- */
@@ -80,9 +82,9 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
   text-transform: uppercase;
   letter-spacing: 0.26em;
   font-size: 0.7rem;
-  color: var(--stone);
+  color: var(--green);
 }
-.eyebrow--light { color: var(--brass-2); }
+.eyebrow--light { color: #a3c48b; }
 
 .sec-head { margin-bottom: 2.6rem; }
 .sec-head--center { text-align: center; max-width: 760px; margin-inline: auto; margin-bottom: 3.6rem; }
@@ -240,8 +242,8 @@ a.topbar__item:hover { color: var(--ivory); }
   align-items: center;
   position: relative;
   background:
-    radial-gradient(120% 80% at 0% 100%, rgba(124,36,51,0.22), transparent 60%),
-    radial-gradient(90% 70% at 100% 0%, rgba(183,150,90,0.10), transparent 55%),
+    radial-gradient(120% 80% at 0% 100%, rgba(168,54,43,0.24), transparent 60%),
+    radial-gradient(90% 70% at 100% 0%, rgba(194,146,47,0.14), transparent 55%),
     var(--espresso);
 }
 .hero__panel::after {
@@ -313,7 +315,7 @@ a.topbar__item:hover { color: var(--ivory); }
 /* ===================================================================
    MANIFESTO
    =================================================================== */
-.manifesto { background: var(--bordeaux); color: var(--ivory); padding: clamp(3.5rem, 7vw, 6rem) 0; }
+.manifesto { background: var(--green); color: var(--ivory); padding: clamp(3.5rem, 7vw, 6rem) 0; }
 .manifesto__inner { max-width: 880px; margin-inline: auto; text-align: center; }
 .manifesto__quote {
   font-family: var(--display);
@@ -389,7 +391,7 @@ a.topbar__item:hover { color: var(--ivory); }
    =================================================================== */
 .menu {
   background:
-    radial-gradient(80% 60% at 100% 0%, rgba(124,36,51,0.18), transparent 55%),
+    radial-gradient(80% 60% at 100% 0%, rgba(66,107,57,0.22), transparent 55%),
     var(--espresso);
   color: var(--ivory);
 }
@@ -477,7 +479,7 @@ a.topbar__item:hover { color: var(--ivory); }
 /* ===================================================================
    FOOTER
    =================================================================== */
-.site-footer { background: #100c09; color: rgba(244,238,228,0.6); padding-top: 4rem; }
+.site-footer { background: #1f140d; color: rgba(247,240,226,0.6); padding-top: 4rem; }
 .site-footer__top { display: grid; grid-template-columns: 1.5fr 1fr 1fr; gap: 2.5rem; padding-bottom: 3rem; border-bottom: 1px solid var(--line-d); }
 .site-footer__brand .brand__name { color: var(--ivory); font-size: 2rem; font-family: var(--display); }
 .site-footer__brand .brand__sub { display: block; color: var(--brass-2); text-transform: uppercase; letter-spacing: 0.28em; font-size: 0.62rem; margin: 6px 0 1rem; }
