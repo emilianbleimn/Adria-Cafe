@@ -1,33 +1,33 @@
 /* ===================================================================
-   Eiscafé Adria — interactions
+   EB Hochdruckreinigung — interactions
    =================================================================== */
 (function () {
   "use strict";
 
   /* ---------- Mobile navigation ---------- */
   var toggle = document.getElementById("navToggle");
-  var links = document.getElementById("navLinks");
+  var nav = document.getElementById("mainNav");
 
   function closeNav() {
-    if (!links) return;
-    links.classList.remove("is-open");
+    if (!nav) return;
+    nav.classList.remove("is-open");
     document.body.classList.remove("nav-open");
     if (toggle) toggle.setAttribute("aria-expanded", "false");
   }
 
-  if (toggle && links) {
+  if (toggle && nav) {
     toggle.addEventListener("click", function () {
-      var open = links.classList.toggle("is-open");
+      var open = nav.classList.toggle("is-open");
       document.body.classList.toggle("nav-open", open);
       toggle.setAttribute("aria-expanded", open ? "true" : "false");
     });
-    links.querySelectorAll("a").forEach(function (a) {
+    nav.querySelectorAll("a").forEach(function (a) {
       a.addEventListener("click", closeNav);
     });
     document.addEventListener("click", function (e) {
       if (
-        links.classList.contains("is-open") &&
-        !links.contains(e.target) &&
+        nav.classList.contains("is-open") &&
+        !nav.contains(e.target) &&
         !toggle.contains(e.target)
       ) {
         closeNav();
@@ -40,12 +40,10 @@
 
   /* ---------- Sticky header shadow ---------- */
   var header = document.getElementById("siteHeader");
-  var toTop = document.getElementById("toTop");
 
   function onScroll() {
     var y = window.scrollY || window.pageYOffset;
     if (header) header.classList.toggle("is-stuck", y > 10);
-    if (toTop) toTop.classList.toggle("is-visible", y > 600);
   }
   window.addEventListener("scroll", onScroll, { passive: true });
   onScroll();
@@ -77,22 +75,85 @@
   var yearEl = document.getElementById("year");
   if (yearEl) yearEl.textContent = String(new Date().getFullYear());
 
-  /* ---------- "Geöffnet / Geschlossen" indicator ----------
-     Mo–Sa 09:00–23:00 · So & (vereinfacht) 10:00–23:00          */
-  var stateEl = document.getElementById("openState");
-  if (stateEl) {
-    var now = new Date();
-    var day = now.getDay(); // 0 = Sonntag
-    var minutes = now.getHours() * 60 + now.getMinutes();
-    var openMin = (day === 0 ? 10 : 9) * 60;
-    var closeMin = 23 * 60;
-    var isOpen = minutes >= openMin && minutes < closeMin;
+  /* ---------- Before / after slider ---------- */
+  var baSlider = document.getElementById("baSlider");
+  var baBefore = document.getElementById("baBefore");
+  var baHandle = document.getElementById("baHandle");
 
-    stateEl.classList.add(isOpen ? "is-open" : "is-closed");
-    stateEl.innerHTML =
-      '<span class="dot"></span>' +
-      (isOpen
-        ? "Jetzt geöffnet — wir freuen uns auf Sie!"
-        : "Gerade geschlossen — bald wieder für Sie da.");
+  if (baSlider && baBefore && baHandle) {
+    var dragging = false;
+
+    function setPosition(percent) {
+      percent = Math.min(100, Math.max(0, percent));
+      baBefore.style.width = percent + "%";
+      baHandle.style.left = percent + "%";
+      baHandle.setAttribute("aria-valuenow", String(Math.round(percent)));
+    }
+
+    function positionFromClientX(clientX) {
+      var rect = baSlider.getBoundingClientRect();
+      var percent = ((clientX - rect.left) / rect.width) * 100;
+      setPosition(percent);
+    }
+
+    baSlider.addEventListener("pointerdown", function (e) {
+      dragging = true;
+      baSlider.setPointerCapture(e.pointerId);
+      positionFromClientX(e.clientX);
+    });
+    baSlider.addEventListener("pointermove", function (e) {
+      if (!dragging) return;
+      positionFromClientX(e.clientX);
+    });
+    baSlider.addEventListener("pointerup", function () { dragging = false; });
+    baSlider.addEventListener("pointercancel", function () { dragging = false; });
+
+    baHandle.addEventListener("keydown", function (e) {
+      var current = parseFloat(baHandle.getAttribute("aria-valuenow")) || 50;
+      if (e.key === "ArrowLeft") { setPosition(current - 5); e.preventDefault(); }
+      if (e.key === "ArrowRight") { setPosition(current + 5); e.preventDefault(); }
+    });
+
+    setPosition(50);
+  }
+
+  /* ---------- Contact form -> mailto ---------- */
+  var form = document.getElementById("contactForm");
+  if (form) {
+    form.addEventListener("submit", function (e) {
+      e.preventDefault();
+
+      var name = form.name.value.trim();
+      var phone = form.phone.value.trim();
+
+      if (!name || !phone) {
+        form.reportValidity();
+        return;
+      }
+
+      var email = form.email.value.trim();
+      var place = form.place.value.trim();
+      var type = form.type.value;
+      var message = form.message.value.trim();
+
+      var subject = "Anfrage über die Website: " + type;
+      var bodyLines = [
+        "Name: " + name,
+        "Telefon: " + phone,
+        "E-Mail: " + (email || "-"),
+        "PLZ / Ort: " + (place || "-"),
+        "Art der Fläche: " + type,
+        "",
+        "Nachricht:",
+        message || "-"
+      ];
+
+      var mailto =
+        "mailto:[E-Mail eintragen]" +
+        "?subject=" + encodeURIComponent(subject) +
+        "&body=" + encodeURIComponent(bodyLines.join("\n"));
+
+      window.location.href = mailto;
+    });
   }
 })();

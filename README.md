@@ -1,41 +1,43 @@
-# Eiscafé Adria — Website
+# EB Hochdruckreinigung — Website
 
-Eine elegante, professionelle One-Page-Website für das **Eiscafé Adria** in
-Erbach im Odenwald – hausgemachte italienische Eisspezialitäten, Kuchen,
-Waffeln, Crêpes sowie mediterrane Küche.
+Eine professionelle, aber entspannte One-Page-Website für **EB Hochdruckreinigung**
+— Reinigung von Einfahrten, Terrassen, Gehwegen und allen befestigten
+Bodenflächen rund ums Haus.
 
-## Über das Café
+## Über den Betrieb
 
-- **Adresse:** Werner-von-Siemens-Straße 8, 64711 Erbach im Odenwald
-- **Telefon:** 06062 41 68
-- **E-Mail:** cafe-adria@t-online.de
-- **Öffnungszeiten:** Mo–Sa 9:00–23:00 Uhr · So & Feiertage 10:00–23:00 Uhr
-- **Betrieb:** Familienbetrieb (Frare & Tavian GbR)
+- **Leistungen:** Einfahrten, Terrassen (Stein, Fliesen, Holz), Gehwege &
+  Hofeinfahrten, Pflaster- & Hofflächen, Poolumrandungen & Gartenwege,
+  Garagenvorplätze
+- **Kontaktdaten, Einzugsgebiet & Öffnungszeiten:** aktuell als Platzhalter
+  hinterlegt (`[Telefonnummer eintragen]`, `[E-Mail eintragen]`,
+  `Region [Stadt] & Umgebung`) — bitte vor Veröffentlichung ausfüllen,
+  siehe `ANLEITUNG.md`.
 
 ## Aufbau der Website
 
 Die Seite ist vollständig statisch und **ohne externe Bild-Abhängigkeiten**
-gestaltet – alle Illustrationen sind als handgefertigte SVG- und CSS-Grafiken
-eingebettet. So lädt die Seite überall schnell und zuverlässig.
+gestaltet — alle Grafiken (Logo, Icons, Vorher/Nachher-Vergleich) sind als
+handgefertigte SVG- und CSS-Illustrationen eingebettet. So lädt die Seite
+überall schnell und zuverlässig, ganz ohne Stockfotos.
 
 | Abschnitt        | Inhalt                                                        |
-|------------------|---------------------------------------------------------------|
-| Hero             | Begrüßung, Kernbotschaft, Eckdaten                            |
-| Highlights       | Hausgemachtes Eis · Patisserie · Küche · Terrasse            |
-| Tradition        | Geschichte des Familienbetriebs                              |
-| Spezialitäten    | Übersicht des kulinarischen Angebots                         |
-| Karte            | Auszug aus der Speisekarte                                   |
-| Impressionen     | Stimmungsvolle Galerie                                       |
-| Erbach           | Lage in der historischen Altstadt + Karte                   |
-| Kontakt          | Öffnungszeiten, Adresse, Live-„Geöffnet"-Anzeige            |
+|------------------|-----------------------------------------------------------------|
+| Hero             | Kernbotschaft, CTA "Kostenlose Einschätzung", Vertrauens-Badges |
+| Leistungen       | 6 Leistungskarten für alle Bodenflächen                        |
+| Vorher/Nachher   | Interaktiver Schieberegler-Vergleich                           |
+| Ablauf           | 4 Schritte von der Anfrage bis zum Ergebnis                    |
+| Warum wir        | Vertrauensargumente (Erfahrung, Technik, Preise, Termine …)    |
+| Kontakt          | Kontaktinfos + Formular (öffnet vorausgefüllte E-Mail)         |
 
 ## Dateien
 
 ```
-index.html        – Struktur & Inhalt
-css/style.css     – Design-System (Farben, Typografie, Layout, Responsive)
-js/main.js        – Navigation, Scroll-Animationen, Öffnungs-Status
+index.html         – Struktur & Inhalt
+css/style.css       – Design-System (Farben, Typografie, Layout, Responsive)
+js/main.js          – Navigation, Scroll-Animationen, Vorher/Nachher-Regler, Formular
 assets/favicon.svg
+assets/logo-eb.svg
 ```
 
 ## Lokal ansehen
@@ -52,20 +54,22 @@ python3 -m http.server 8000
 
 - Reines HTML5, CSS3 und Vanilla JavaScript – keine Frameworks, keine Build-Tools
 - Responsives Layout (Desktop, Tablet, Mobil)
-- Schriften: *Bodoni Moda* & *Archivo* (Google Fonts)
-- Strukturierte Daten (schema.org `IceCreamShop`) für Suchmaschinen
+- Schriften: *Poppins* & *Inter* (Google Fonts)
+- Strukturierte Daten (schema.org `CleaningService`) für Suchmaschinen
 - Berücksichtigt `prefers-reduced-motion`
+- Kontaktformular funktioniert ohne eigenes Backend (öffnet das
+  E-Mail-Programm des Besuchers mit vorausgefüllter Nachricht)
 
-## Bilder
+## Farbkonzept
 
-Die verwendeten Fotos stammen als lizenzfreie Platzhalter von
-[Unsplash](https://unsplash.com) (kostenlose, kommerziell nutzbare Lizenz)
-und liegen unter `assets/img/`. Für den finalen Auftritt empfiehlt es sich,
-sie durch eigene Aufnahmen des Eiscafé Adria zu ersetzen – einfach die
-Dateien gleichen Namens austauschen.
+- **Blau** (Wasser, Vertrauen, Professionalität) als Hauptfarbe
+- **Sonnengelb/Orange** als warmer Akzent für Buttons & Call-to-Actions
+  (steht bewusst im Kontrast zum Blau — wirkt einladend und "locker")
+- **Weiß & helles Blaugrau** für ruhige, aufgeräumte Flächen
 
 ## Hinweis zu Inhalten
 
-Texte und Eckdaten basieren auf öffentlich verfügbaren Informationen.
-Die Preise und Gerichte in der Karte sind beispielhaft und sollten vor
-Veröffentlichung mit dem aktuellen Angebot des Cafés abgeglichen werden.
+Texte sind beispielhaft und professionell, aber locker formuliert. Alle
+Platzhalter (Telefonnummer, E-Mail, Region, Impressum/Datenschutz-Links)
+müssen vor dem Livegang noch mit echten Angaben gefüllt werden — siehe
+`ANLEITUNG.md`.
