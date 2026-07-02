@@ -60,6 +60,8 @@ python3 -m http.server 8000
 - Berücksichtigt `prefers-reduced-motion`
 - Kontaktformular funktioniert ohne eigenes Backend (öffnet das
   E-Mail-Programm des Besuchers mit vorausgefüllter Nachricht)
+- Umschaltbarer **Hell-/Dunkelmodus** (Button oben rechts im Menü) — merkt
+  sich die Wahl im Browser und folgt sonst der Systemeinstellung
 
 ## Farbkonzept
 

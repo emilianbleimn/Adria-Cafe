@@ -71,6 +71,24 @@
     });
   }
 
+  /* ---------- Light / dark mode toggle ---------- */
+  var themeToggle = document.getElementById("themeToggle");
+  if (themeToggle) {
+    var root = document.documentElement;
+
+    function syncPressed() {
+      themeToggle.setAttribute("aria-pressed", String(root.getAttribute("data-theme") === "dark"));
+    }
+    syncPressed();
+
+    themeToggle.addEventListener("click", function () {
+      var next = root.getAttribute("data-theme") === "dark" ? "light" : "dark";
+      root.setAttribute("data-theme", next);
+      try { localStorage.setItem("eb-theme", next); } catch (e) {}
+      syncPressed();
+    });
+  }
+
   /* ---------- Footer year ---------- */
   var yearEl = document.getElementById("year");
   if (yearEl) yearEl.textContent = String(new Date().getFullYear());
