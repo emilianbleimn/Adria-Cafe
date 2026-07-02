@@ -25,6 +25,7 @@ handgefertigte SVG- und CSS-Illustrationen eingebettet. So lädt die Seite
 |------------------|-----------------------------------------------------------------|
 | Hero             | Kernbotschaft, CTA "Kostenlose Einschätzung", Vertrauens-Badges |
 | Leistungen       | 6 Leistungskarten für alle Bodenflächen                        |
+| Preise           | Transparenter Quadratmeterpreis (ab 3 €/m²)                    |
 | Vorher/Nachher   | Interaktiver Schieberegler-Vergleich                           |
 | Ablauf           | 4 Schritte von der Anfrage bis zum Ergebnis                    |
 | Warum wir        | Vertrauensargumente (Erfahrung, Technik, Preise, Termine …)    |
