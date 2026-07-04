@@ -23,20 +23,20 @@ handgefertigte SVG- und CSS-Illustrationen eingebettet. So lädt die Seite
 
 | Abschnitt        | Inhalt                                                        |
 |------------------|-----------------------------------------------------------------|
-| Hero             | Kernbotschaft, CTA "Kostenlose Einschätzung", Vertrauens-Badges |
+| Hero             | Kernbotschaft, CTA "Jetzt Termin buchen", Vertrauens-Badges     |
 | Leistungen       | 6 Leistungskarten für alle Bodenflächen                        |
-| Preise           | Transparenter Quadratmeterpreis (ab 3 €/m²)                    |
+| Preise           | Fester Quadratmeterpreis (3 €/m², keine Einschätzung nötig)    |
 | Vorher/Nachher   | Interaktiver Schieberegler-Vergleich                           |
-| Ablauf           | 4 Schritte von der Anfrage bis zum Ergebnis                    |
+| Ablauf           | 4 Schritte von der Terminwahl bis zum Ergebnis                 |
 | Warum wir        | Vertrauensargumente (Erfahrung, Technik, Preise, Termine …)    |
-| Kontakt          | Kontaktinfos + Formular (öffnet vorausgefüllte E-Mail)         |
+| Kontakt/Buchung  | Kalender mit freien/belegten Tagen + Formular mit Foto-Upload  |
 
 ## Dateien
 
 ```
 index.html         – Struktur & Inhalt
 css/style.css       – Design-System (Farben, Typografie, Layout, Responsive)
-js/main.js          – Navigation, Scroll-Animationen, Vorher/Nachher-Regler, Formular
+js/main.js          – Navigation, Kalender, Foto-Vorschau, Formularversand
 assets/favicon.svg
 assets/logo-eb.png
 ```
@@ -58,8 +58,14 @@ python3 -m http.server 8000
 - Schriften: *Poppins* & *Inter* (Google Fonts)
 - Strukturierte Daten (schema.org `CleaningService`) für Suchmaschinen
 - Berücksichtigt `prefers-reduced-motion`
-- Kontaktformular funktioniert ohne eigenes Backend (öffnet das
-  E-Mail-Programm des Besuchers mit vorausgefüllter Nachricht)
+- **Buchungskalender**: zeigt freie/belegte Tage direkt im Browser,
+  Sonntage gelten automatisch als geschlossen. Belegte Tage werden in
+  `js/main.js` in einer einfachen Liste gepflegt (kein Backend, kein
+  Login) — siehe `ANLEITUNG.md`.
+- **Kontakt-/Buchungsformular mit Foto-Upload** über den kostenlosen
+  Dienst [Web3Forms](https://web3forms.com) (unterstützt Datei-Anhänge,
+  die mailto-Links technisch nicht können) — braucht einen kostenlosen
+  Access Key, siehe `ANLEITUNG.md`.
 - Umschaltbarer **Hell-/Dunkelmodus** (Button oben rechts im Menü) — merkt
   sich die Wahl im Browser und folgt sonst der Systemeinstellung
 

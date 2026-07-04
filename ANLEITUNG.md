@@ -14,8 +14,8 @@ ganz ohne Programme zu installieren. Hier Schritt für Schritt, was du anklickst
 
 Aktuell stehen an einigen Stellen noch Platzhalter in eckigen Klammern:
 
-- `[Telefonnummer eintragen]` — kommt 3× vor (Header, Hero, Kontakt-Bereich)
-- `[E-Mail eintragen]` — kommt 2× vor (Kontakt-Bereich, im Formular-Skript)
+- `[Telefonnummer eintragen]` — kommt mehrfach vor (Header, Hero, Kontakt-Bereich)
+- `[E-Mail eintragen]` — im Kontakt-Bereich
 - `Region [Stadt] & Umgebung` — dein Einzugsgebiet
 
 **So findest & ersetzt du sie:**
@@ -25,10 +25,54 @@ Aktuell stehen an einigen Stellen noch Platzhalter in eckigen Klammern:
 3. Gleiches für `[E-Mail eintragen]` mit deiner E-Mail-Adresse.
 4. Für die Telefonnummer im `tel:`-Link **keine Leerzeichen** verwenden,
    z. B. `tel:+4915123456789`.
-5. Für die E-Mail im Kontaktformular auch die Datei `js/main.js` öffnen
-   (👉 https://github.com/emilianbleimn/Adria-Cafe/edit/claude/eb-hochdruckreinigung-site-jl42wf/js/main.js)
-   und ganz unten `[E-Mail eintragen]` durch deine echte Adresse ersetzen.
-6. Jeweils oben rechts **„Commit changes…"** klicken → bestätigen. ✅
+5. Oben rechts **„Commit changes…"** klicken → bestätigen. ✅
+
+---
+
+## 📅 A.1) Buchungsformular aktivieren (Web3Forms-Key)
+
+Das Buchungsformular (inkl. Foto-Upload) verschickt Anfragen über den
+kostenlosen Dienst [Web3Forms](https://web3forms.com). Ohne eigenen
+Zugangsschlüssel kommen keine Anfragen bei dir an — das dauert aber nur
+1 Minute:
+
+1. Gehe auf 👉 https://web3forms.com und klicke auf **„Create Access Key"**.
+2. Gib deine E-Mail-Adresse ein (die, an die Anfragen gehen sollen) — kein
+   Passwort, keine Kreditkarte nötig.
+3. Du bekommst sofort einen Access Key angezeigt, z. B. `a1b2c3d4-...`.
+   Kopiere ihn.
+4. Öffne den Editor: 👉 https://github.com/emilianbleimn/Adria-Cafe/edit/claude/eb-hochdruckreinigung-site-jl42wf/index.html
+5. Mit **Strg+F** nach `[WEB3FORMS_ACCESS_KEY_EINTRAGEN]` suchen (steht in
+   einem versteckten Formularfeld) und durch deinen Access Key ersetzen.
+6. Oben rechts **„Commit changes…"** → bestätigen. ✅
+
+Ab jetzt landen alle Buchungsanfragen inkl. hochgeladener Fotos direkt in
+deinem E-Mail-Postfach.
+
+---
+
+## 🗓️ A.2) Belegte Termine im Kalender pflegen
+
+Der Kalender auf der Website zeigt automatisch an, welche Tage frei sind.
+Sonntage sind automatisch als „Geschlossen" markiert. Wenn ein Termin
+gebucht ist und nicht mehr frei sein soll:
+
+1. Öffne den Editor: 👉 https://github.com/emilianbleimn/Adria-Cafe/edit/claude/eb-hochdruckreinigung-site-jl42wf/js/main.js
+2. Ganz oben findest du die Zeile:
+   ```js
+   var BLOCKED_DATES = [];
+   ```
+3. Trag das Datum im Format `"JJJJ-MM-TT"` ein, z. B. für den 14. Juli 2026:
+   ```js
+   var BLOCKED_DATES = ["2026-07-14"];
+   ```
+   Mehrere Tage einfach mit Komma trennen: `["2026-07-14", "2026-07-15"]`.
+4. Oben rechts **„Commit changes…"** → bestätigen. ✅ Der Tag erscheint ab
+   sofort im Kalender durchgestrichen als „Belegt".
+
+*Hinweis:* Das ist kein Live-System mit mehreren Bearbeitern — die Liste
+musst du selbst aktuell halten, sobald du eine Anfrage per Kalender
+angenommen hast.
 
 ---
 
@@ -63,7 +107,7 @@ der Rest der Seite zieht automatisch nach.
 
 1. **Diesen Link öffnen:**
    👉 https://github.com/emilianbleimn/Adria-Cafe/edit/claude/eb-hochdruckreinigung-site-jl42wf/index.html
-2. Im Editor mit **Strg+F** den Text suchen, den du ändern willst (z. B. „Kostenlose Einschätzung").
+2. Im Editor mit **Strg+F** den Text suchen, den du ändern willst (z. B. „Jetzt Termin buchen").
 3. Den Text überschreiben — **nur den Text zwischen den spitzen Klammern** ändern,
    die `<…>`-Teile stehen lassen.
 4. Oben rechts **„Commit changes…"** → bestätigen. ✅

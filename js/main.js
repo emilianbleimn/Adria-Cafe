@@ -135,8 +135,153 @@
     setPosition(50);
   }
 
-  /* ---------- Contact form -> mailto ---------- */
+  /* ---------- Booking calendar ----------
+     Belegte Tage hier eintragen (Format "JJJJ-MM-TT"), z. B.:
+     var BLOCKED_DATES = ["2026-07-14", "2026-07-15"];
+     Sonntage gelten automatisch als geschlossen.                */
+  var BLOCKED_DATES = [];
+  var BOOKING_MAX_MONTHS_AHEAD = 3;
+
+  var calDays = document.getElementById("calDays");
+  var calMonthLabel = document.getElementById("calMonthLabel");
+  var calPrev = document.getElementById("calPrev");
+  var calNext = document.getElementById("calNext");
+  var calSelectedText = document.getElementById("calSelectedText");
+  var cfTermin = document.getElementById("cfTermin");
+
+  if (calDays && calMonthLabel && calPrev && calNext) {
+    var MONTH_NAMES = [
+      "Januar", "Februar", "März", "April", "Mai", "Juni",
+      "Juli", "August", "September", "Oktober", "November", "Dezember"
+    ];
+    var WEEKDAY_LABELS = ["So", "Mo", "Di", "Mi", "Do", "Fr", "Sa"];
+
+    var today = new Date();
+    today.setHours(0, 0, 0, 0);
+
+    var minYear = today.getFullYear();
+    var minMonth = today.getMonth();
+    var maxDate = new Date(minYear, minMonth + BOOKING_MAX_MONTHS_AHEAD, 1);
+
+    var viewYear = minYear;
+    var viewMonth = minMonth;
+    var selectedDateStr = "";
+
+    function toISODate(y, m, d) {
+      return y + "-" + String(m + 1).padStart(2, "0") + "-" + String(d).padStart(2, "0");
+    }
+
+    function formatSelected(y, m, d) {
+      var date = new Date(y, m, d);
+      var weekday = WEEKDAY_LABELS[date.getDay()];
+      return weekday + ", " + d + ". " + MONTH_NAMES[m] + " " + y;
+    }
+
+    function renderCalendar() {
+      calMonthLabel.textContent = MONTH_NAMES[viewMonth] + " " + viewYear;
+      calPrev.disabled = viewYear === minYear && viewMonth === minMonth;
+      calNext.disabled = viewYear === maxDate.getFullYear() && viewMonth === maxDate.getMonth();
+
+      calDays.innerHTML = "";
+
+      var firstDay = new Date(viewYear, viewMonth, 1);
+      var daysInMonth = new Date(viewYear, viewMonth + 1, 0).getDate();
+      var leadingEmpty = (firstDay.getDay() + 6) % 7; // Montag = 0
+
+      for (var i = 0; i < leadingEmpty; i++) {
+        var empty = document.createElement("span");
+        empty.className = "calendar-day calendar-day--empty";
+        calDays.appendChild(empty);
+      }
+
+      for (var day = 1; day <= daysInMonth; day++) {
+        var dateObj = new Date(viewYear, viewMonth, day);
+        var iso = toISODate(viewYear, viewMonth, day);
+        var isPast = dateObj < today;
+        var isSunday = dateObj.getDay() === 0;
+        var isBlocked = BLOCKED_DATES.indexOf(iso) !== -1;
+        var isToday = dateObj.getTime() === today.getTime();
+        var isSelected = iso === selectedDateStr;
+
+        var btn = document.createElement("button");
+        btn.type = "button";
+        btn.className = "calendar-day";
+        btn.textContent = String(day);
+
+        if (isPast || isSunday || isBlocked) {
+          btn.disabled = true;
+          if (isBlocked && !isPast && !isSunday) {
+            btn.classList.add("calendar-day--booked");
+          }
+        } else {
+          btn.addEventListener("click", function () {
+            var parts = this.getAttribute("data-iso").split("-");
+            selectedDateStr = this.getAttribute("data-iso");
+            if (cfTermin) cfTermin.value = selectedDateStr;
+            if (calSelectedText) {
+              calSelectedText.classList.add("has-date");
+              calSelectedText.querySelector("span").textContent =
+                "Ausgewählter Termin: " + formatSelected(+parts[0], +parts[1] - 1, +parts[2]);
+            }
+            renderCalendar();
+          });
+        }
+
+        btn.setAttribute("data-iso", iso);
+        if (isToday) btn.classList.add("calendar-day--today");
+        if (isSelected) btn.classList.add("calendar-day--selected");
+
+        calDays.appendChild(btn);
+      }
+    }
+
+    calPrev.addEventListener("click", function () {
+      viewMonth--;
+      if (viewMonth < 0) { viewMonth = 11; viewYear--; }
+      renderCalendar();
+    });
+    calNext.addEventListener("click", function () {
+      viewMonth++;
+      if (viewMonth > 11) { viewMonth = 0; viewYear++; }
+      renderCalendar();
+    });
+
+    renderCalendar();
+  }
+
+  /* ---------- Photo previews ---------- */
+  var photoInput = document.getElementById("cfPhotos");
+  var photoPreviews = document.getElementById("photoPreviews");
+  var previewUrls = [];
+
+  if (photoInput && photoPreviews) {
+    photoInput.addEventListener("change", function () {
+      previewUrls.forEach(function (url) { URL.revokeObjectURL(url); });
+      previewUrls = [];
+      photoPreviews.innerHTML = "";
+
+      Array.prototype.slice.call(photoInput.files, 0, 5).forEach(function (file) {
+        var url = URL.createObjectURL(file);
+        previewUrls.push(url);
+        var img = document.createElement("img");
+        img.src = url;
+        img.alt = file.name;
+        photoPreviews.appendChild(img);
+      });
+    });
+  }
+
+  /* ---------- Contact form -> Web3Forms ---------- */
   var form = document.getElementById("contactForm");
+  var formStatus = document.getElementById("formStatus");
+
+  function setStatus(message, type) {
+    if (!formStatus) return;
+    formStatus.textContent = message;
+    formStatus.classList.remove("is-success", "is-error");
+    if (type) formStatus.classList.add(type);
+  }
+
   if (form) {
     form.addEventListener("submit", function (e) {
       e.preventDefault();
@@ -148,30 +293,43 @@
         form.reportValidity();
         return;
       }
+      if (!cfTermin || !cfTermin.value) {
+        setStatus("Bitte zuerst oben im Kalender einen freien Termin auswählen.", "is-error");
+        return;
+      }
 
-      var email = form.email.value.trim();
-      var place = form.place.value.trim();
-      var type = form.type.value;
-      var message = form.message.value.trim();
+      var submitBtn = document.getElementById("cfSubmit");
+      if (submitBtn) submitBtn.disabled = true;
+      setStatus("Anfrage wird gesendet …", "");
 
-      var subject = "Anfrage über die Website: " + type;
-      var bodyLines = [
-        "Name: " + name,
-        "Telefon: " + phone,
-        "E-Mail: " + (email || "-"),
-        "PLZ / Ort: " + (place || "-"),
-        "Art der Fläche: " + type,
-        "",
-        "Nachricht:",
-        message || "-"
-      ];
+      var formData = new FormData(form);
 
-      var mailto =
-        "mailto:[E-Mail eintragen]" +
-        "?subject=" + encodeURIComponent(subject) +
-        "&body=" + encodeURIComponent(bodyLines.join("\n"));
-
-      window.location.href = mailto;
+      fetch("https://api.web3forms.com/submit", {
+        method: "POST",
+        body: formData
+      })
+        .then(function (response) { return response.json(); })
+        .then(function (result) {
+          if (result.success) {
+            setStatus("Danke! Deine Terminanfrage ist raus — wir melden uns in der Regel innerhalb von 24 Stunden.", "is-success");
+            form.reset();
+            if (photoPreviews) photoPreviews.innerHTML = "";
+            if (cfTermin) cfTermin.value = "";
+            if (calSelectedText) {
+              calSelectedText.classList.remove("has-date");
+              calSelectedText.querySelector("span").textContent =
+                "Noch kein Termin ausgewählt — bitte oben im Kalender einen freien Tag anklicken.";
+            }
+          } else {
+            setStatus("Etwas ist schiefgelaufen. Ruf uns gerne direkt an: [Telefonnummer eintragen]", "is-error");
+          }
+        })
+        .catch(function () {
+          setStatus("Anfrage konnte nicht gesendet werden. Ruf uns gerne direkt an: [Telefonnummer eintragen]", "is-error");
+        })
+        .finally(function () {
+          if (submitBtn) submitBtn.disabled = false;
+        });
     });
   }
 })();
