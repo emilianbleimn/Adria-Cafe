@@ -326,19 +326,14 @@ body.nav-open .nav-toggle span:nth-child(3) { transform: translateY(-7px) rotate
   position: relative;
   overflow: hidden;
   box-shadow: inset 0 0 0 1px rgba(255,255,255,0.15);
+  background-size: cover;
+  background-position: center 25%;
 }
 .hero-card-surface--dirty {
-  background:
-    radial-gradient(circle at 30% 30%, rgba(70,58,30,0.55) 0, transparent 40%),
-    radial-gradient(circle at 70% 60%, rgba(60,80,40,0.5) 0, transparent 45%),
-    radial-gradient(circle at 45% 80%, rgba(50,60,30,0.45) 0, transparent 40%),
-    repeating-linear-gradient(0deg, #7c8a86 0 26px, #6d7a76 26px 28px),
-    repeating-linear-gradient(90deg, transparent 0 40px, rgba(0,0,0,0.12) 40px 42px);
+  background-image: url("../assets/img/vorher.jpg");
 }
 .hero-card-surface--clean {
-  background:
-    repeating-linear-gradient(0deg, #eef6fb 0 26px, #d7e9f2 26px 28px),
-    repeating-linear-gradient(90deg, transparent 0 40px, rgba(15,111,176,0.12) 40px 42px);
+  background-image: url("../assets/img/nachher.jpg");
 }
 .hero-card-label {
   position: absolute;
