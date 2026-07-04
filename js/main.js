@@ -138,7 +138,7 @@
   /* ---------- Booking calendar ----------
      Belegte Tage hier eintragen (Format "JJJJ-MM-TT"), z. B.:
      var BLOCKED_DATES = ["2026-07-14", "2026-07-15"];
-     Sonntage gelten automatisch als geschlossen.                */
+     Samstag und Sonntag gelten automatisch als geschlossen.       */
   var BLOCKED_DATES = [];
   var BOOKING_MAX_MONTHS_AHEAD = 3;
 
@@ -232,7 +232,7 @@
         var dateObj = new Date(viewYear, viewMonth, day);
         var iso = toISODate(viewYear, viewMonth, day);
         var isPast = dateObj < today;
-        var isSunday = dateObj.getDay() === 0;
+        var isWeekend = dateObj.getDay() === 0 || dateObj.getDay() === 6;
         var isBlocked = BLOCKED_DATES.indexOf(iso) !== -1;
         var isToday = dateObj.getTime() === today.getTime();
         var isSelected = iso === selectedDateStr;
@@ -242,9 +242,9 @@
         btn.className = "calendar-day";
         btn.textContent = String(day);
 
-        if (isPast || isSunday || isBlocked) {
+        if (isPast || isWeekend || isBlocked) {
           btn.disabled = true;
-          if (isBlocked && !isPast && !isSunday) {
+          if (isBlocked && !isPast && !isWeekend) {
             btn.classList.add("calendar-day--booked");
           }
         } else {

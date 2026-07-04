@@ -59,7 +59,7 @@ python3 -m http.server 8000
 - Strukturierte Daten (schema.org `CleaningService`) für Suchmaschinen
 - Berücksichtigt `prefers-reduced-motion`
 - **Buchungskalender**: zeigt freie/belegte Tage direkt im Browser,
-  Sonntage gelten automatisch als geschlossen. Belegte Tage werden in
+  Samstag und Sonntag gelten automatisch als geschlossen. Belegte Tage werden in
   `js/main.js` in einer einfachen Liste gepflegt (kein Backend, kein
   Login) — siehe `ANLEITUNG.md`.
 - **Kontakt-/Buchungsformular mit Foto-Upload** über den kostenlosen
