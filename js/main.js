@@ -148,14 +148,55 @@
   var calNext = document.getElementById("calNext");
   var calSelectedText = document.getElementById("calSelectedText");
   var cfTermin = document.getElementById("cfTermin");
+  var slotRadios = document.querySelectorAll('input[name="zeitfenster"]');
+
+  var MONTH_NAMES = [
+    "Januar", "Februar", "März", "April", "Mai", "Juni",
+    "Juli", "August", "September", "Oktober", "November", "Dezember"
+  ];
+  var WEEKDAY_LABELS = ["So", "Mo", "Di", "Mi", "Do", "Fr", "Sa"];
+
+  var selectedDateStr = "";
+  var selectedSlot = "";
+  var refreshCalendar = function () {};
+
+  function formatSelected(y, m, d) {
+    var date = new Date(y, m, d);
+    var weekday = WEEKDAY_LABELS[date.getDay()];
+    return weekday + ", " + d + ". " + MONTH_NAMES[m] + " " + y;
+  }
+
+  function updateSelectedText() {
+    if (!calSelectedText) return;
+    var span = calSelectedText.querySelector("span");
+
+    if (!selectedDateStr) {
+      calSelectedText.classList.remove("has-date");
+      span.textContent = "Noch kein Termin ausgewählt — bitte oben im Kalender einen freien Tag anklicken.";
+      return;
+    }
+
+    var parts = selectedDateStr.split("-");
+    var dateLabel = formatSelected(+parts[0], +parts[1] - 1, +parts[2]);
+
+    if (!selectedSlot) {
+      calSelectedText.classList.remove("has-date");
+      span.textContent = "Termin: " + dateLabel + " — bitte noch eine Uhrzeit auswählen.";
+      return;
+    }
+
+    calSelectedText.classList.add("has-date");
+    span.textContent = "Ausgewählter Termin: " + dateLabel + ", " + selectedSlot;
+  }
+
+  slotRadios.forEach(function (radio) {
+    radio.addEventListener("change", function () {
+      selectedSlot = radio.checked ? radio.value : selectedSlot;
+      updateSelectedText();
+    });
+  });
 
   if (calDays && calMonthLabel && calPrev && calNext) {
-    var MONTH_NAMES = [
-      "Januar", "Februar", "März", "April", "Mai", "Juni",
-      "Juli", "August", "September", "Oktober", "November", "Dezember"
-    ];
-    var WEEKDAY_LABELS = ["So", "Mo", "Di", "Mi", "Do", "Fr", "Sa"];
-
     var today = new Date();
     today.setHours(0, 0, 0, 0);
 
@@ -165,16 +206,9 @@
 
     var viewYear = minYear;
     var viewMonth = minMonth;
-    var selectedDateStr = "";
 
     function toISODate(y, m, d) {
       return y + "-" + String(m + 1).padStart(2, "0") + "-" + String(d).padStart(2, "0");
-    }
-
-    function formatSelected(y, m, d) {
-      var date = new Date(y, m, d);
-      var weekday = WEEKDAY_LABELS[date.getDay()];
-      return weekday + ", " + d + ". " + MONTH_NAMES[m] + " " + y;
     }
 
     function renderCalendar() {
@@ -215,14 +249,9 @@
           }
         } else {
           btn.addEventListener("click", function () {
-            var parts = this.getAttribute("data-iso").split("-");
             selectedDateStr = this.getAttribute("data-iso");
             if (cfTermin) cfTermin.value = selectedDateStr;
-            if (calSelectedText) {
-              calSelectedText.classList.add("has-date");
-              calSelectedText.querySelector("span").textContent =
-                "Ausgewählter Termin: " + formatSelected(+parts[0], +parts[1] - 1, +parts[2]);
-            }
+            updateSelectedText();
             renderCalendar();
           });
         }
@@ -246,6 +275,7 @@
       renderCalendar();
     });
 
+    refreshCalendar = renderCalendar;
     renderCalendar();
   }
 
@@ -297,6 +327,10 @@
         setStatus("Bitte zuerst oben im Kalender einen freien Termin auswählen.", "is-error");
         return;
       }
+      if (!selectedSlot) {
+        setStatus("Bitte noch eine Uhrzeit auswählen (10–14 Uhr oder 16–20 Uhr).", "is-error");
+        return;
+      }
 
       var submitBtn = document.getElementById("cfSubmit");
       if (submitBtn) submitBtn.disabled = true;
@@ -315,11 +349,10 @@
             form.reset();
             if (photoPreviews) photoPreviews.innerHTML = "";
             if (cfTermin) cfTermin.value = "";
-            if (calSelectedText) {
-              calSelectedText.classList.remove("has-date");
-              calSelectedText.querySelector("span").textContent =
-                "Noch kein Termin ausgewählt — bitte oben im Kalender einen freien Tag anklicken.";
-            }
+            selectedDateStr = "";
+            selectedSlot = "";
+            updateSelectedText();
+            refreshCalendar();
           } else {
             setStatus("Etwas ist schiefgelaufen. Ruf mich gerne direkt an: [Telefonnummer eintragen]", "is-error");
           }
