@@ -311,7 +311,7 @@
         .then(function (response) { return response.json(); })
         .then(function (result) {
           if (result.success) {
-            setStatus("Danke! Deine Terminanfrage ist raus — wir melden uns in der Regel innerhalb von 24 Stunden.", "is-success");
+            setStatus("Danke! Deine Terminanfrage ist raus — ich melde mich in der Regel innerhalb von 24 Stunden.", "is-success");
             form.reset();
             if (photoPreviews) photoPreviews.innerHTML = "";
             if (cfTermin) cfTermin.value = "";
@@ -321,11 +321,11 @@
                 "Noch kein Termin ausgewählt — bitte oben im Kalender einen freien Tag anklicken.";
             }
           } else {
-            setStatus("Etwas ist schiefgelaufen. Ruf uns gerne direkt an: [Telefonnummer eintragen]", "is-error");
+            setStatus("Etwas ist schiefgelaufen. Ruf mich gerne direkt an: [Telefonnummer eintragen]", "is-error");
           }
         })
         .catch(function () {
-          setStatus("Anfrage konnte nicht gesendet werden. Ruf uns gerne direkt an: [Telefonnummer eintragen]", "is-error");
+          setStatus("Anfrage konnte nicht gesendet werden. Ruf mich gerne direkt an: [Telefonnummer eintragen]", "is-error");
         })
         .finally(function () {
           if (submitBtn) submitBtn.disabled = false;

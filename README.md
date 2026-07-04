@@ -28,7 +28,7 @@ handgefertigte SVG- und CSS-Illustrationen eingebettet. So lädt die Seite
 | Preise           | Fester Quadratmeterpreis (3 €/m², keine Einschätzung nötig)    |
 | Vorher/Nachher   | Interaktiver Schieberegler-Vergleich                           |
 | Ablauf           | 4 Schritte von der Terminwahl bis zum Ergebnis                 |
-| Warum wir        | Vertrauensargumente (Erfahrung, Technik, Preise, Termine …)    |
+| Warum wir        | Ehrliche Vertrauensargumente (junger Betrieb, Einsatz, Preise …) |
 | Kontakt/Buchung  | Kalender mit freien/belegten Tagen + Formular mit Foto-Upload  |
 
 ## Dateien
