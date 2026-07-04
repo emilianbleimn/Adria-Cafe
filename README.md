@@ -38,7 +38,7 @@ index.html         – Struktur & Inhalt
 css/style.css       – Design-System (Farben, Typografie, Layout, Responsive)
 js/main.js          – Navigation, Scroll-Animationen, Vorher/Nachher-Regler, Formular
 assets/favicon.svg
-assets/logo-eb.svg
+assets/logo-eb.png
 ```
 
 ## Lokal ansehen

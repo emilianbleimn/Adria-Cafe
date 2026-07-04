@@ -173,10 +173,15 @@ h1, h2, h3 {
 .header-right { display: flex; align-items: center; gap: 22px; }
 
 .brand { display: flex; align-items: center; gap: 12px; }
-.brand-logo { flex-shrink: 0; }
-.brand-text { display: flex; flex-direction: column; line-height: 1.2; }
-.brand-name { font-family: var(--display); font-weight: 700; font-size: 1.08rem; color: var(--heading); }
-.brand-tag { font-size: 0.75rem; color: var(--text-faint); font-weight: 500; }
+.brand-logo {
+  flex-shrink: 0;
+  padding: 6px 14px;
+  border-radius: 10px;
+  background: transparent;
+  transition: background-color 0.3s var(--ease);
+}
+[data-theme="dark"] .site-header .brand-logo { background: #ffffff; }
+.brand--footer .brand-logo { background: #ffffff; }
 
 .main-nav { display: flex; align-items: center; gap: 30px; }
 .main-nav a:not(.btn) {
@@ -688,7 +693,6 @@ body.nav-open .nav-toggle span:nth-child(3) { transform: translateY(-7px) rotate
   }
   .main-nav.is-open { transform: translateX(0); }
   .nav-toggle { display: flex; }
-  .brand-tag { display: none; }
 
   .services-grid { grid-template-columns: 1fr; }
   .steps { grid-template-columns: 1fr; }
