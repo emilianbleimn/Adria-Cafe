@@ -393,17 +393,22 @@
           </div>
 
           <div class="form-field">
-            <label id="cfSlotLabel">Uhrzeit *</label>
-            <div class="time-slots" role="radiogroup" aria-labelledby="cfSlotLabel">
-              <label class="time-slot">
-                <input type="radio" name="zeitfenster" value="10:00 - 14:00 Uhr" required>
-                <span>10:00 – 14:00 Uhr</span>
-              </label>
-              <label class="time-slot">
-                <input type="radio" name="zeitfenster" value="16:00 - 20:00 Uhr" required>
-                <span>16:00 – 20:00 Uhr</span>
-              </label>
-            </div>
+            <label for="cfSlot">Uhrzeit *</label>
+            <select id="cfSlot" name="zeitfenster" required>
+              <option value="" disabled selected>Bitte wählen …</option>
+              <optgroup label="Vormittags (10 – 14 Uhr)">
+                <option value="10:00 Uhr">10:00 Uhr</option>
+                <option value="11:00 Uhr">11:00 Uhr</option>
+                <option value="12:00 Uhr">12:00 Uhr</option>
+                <option value="13:00 Uhr">13:00 Uhr</option>
+              </optgroup>
+              <optgroup label="Nachmittags (16 – 20 Uhr)">
+                <option value="16:00 Uhr">16:00 Uhr</option>
+                <option value="17:00 Uhr">17:00 Uhr</option>
+                <option value="18:00 Uhr">18:00 Uhr</option>
+                <option value="19:00 Uhr">19:00 Uhr</option>
+              </optgroup>
+            </select>
           </div>
 
           <div class="form-row">

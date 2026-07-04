@@ -148,7 +148,7 @@
   var calNext = document.getElementById("calNext");
   var calSelectedText = document.getElementById("calSelectedText");
   var cfTermin = document.getElementById("cfTermin");
-  var slotRadios = document.querySelectorAll('input[name="zeitfenster"]');
+  var cfSlot = document.getElementById("cfSlot");
 
   var MONTH_NAMES = [
     "Januar", "Februar", "März", "April", "Mai", "Juni",
@@ -189,12 +189,12 @@
     span.textContent = "Ausgewählter Termin: " + dateLabel + ", " + selectedSlot;
   }
 
-  slotRadios.forEach(function (radio) {
-    radio.addEventListener("change", function () {
-      selectedSlot = radio.checked ? radio.value : selectedSlot;
+  if (cfSlot) {
+    cfSlot.addEventListener("change", function () {
+      selectedSlot = cfSlot.value;
       updateSelectedText();
     });
-  });
+  }
 
   if (calDays && calMonthLabel && calPrev && calNext) {
     var today = new Date();
