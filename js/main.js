@@ -103,7 +103,7 @@
 
     function setPosition(percent) {
       percent = Math.min(100, Math.max(0, percent));
-      baBefore.style.width = percent + "%";
+      baBefore.style.clipPath = "inset(0 " + (100 - percent) + "% 0 0)";
       baHandle.style.left = percent + "%";
       baHandle.setAttribute("aria-valuenow", String(Math.round(percent)));
     }

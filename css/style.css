@@ -464,9 +464,9 @@ body.nav-open .nav-toggle span:nth-child(3) { transform: translateY(-7px) rotate
 /* ---------- Before / After slider ---------- */
 .ba-slider {
   position: relative;
-  max-width: 780px;
+  max-width: 620px;
   margin: 0 auto;
-  aspect-ratio: 16 / 9;
+  aspect-ratio: 4 / 5;
   border-radius: 22px;
   overflow: hidden;
   box-shadow: var(--shadow);
@@ -476,22 +476,15 @@ body.nav-open .nav-toggle span:nth-child(3) { transform: translateY(-7px) rotate
 .ba-surface {
   position: absolute;
   inset: 0;
+  background-size: cover;
+  background-position: center 25%;
 }
 .ba-surface--after {
-  background:
-    repeating-linear-gradient(0deg, #f2f9fd 0 40px, #dcedf6 40px 44px),
-    repeating-linear-gradient(90deg, transparent 0 64px, rgba(15,111,176,0.14) 64px 68px);
+  background-image: url("../assets/img/nachher.jpg");
 }
 .ba-surface--before {
-  width: 50%;
-  background:
-    radial-gradient(circle at 20% 25%, rgba(64,52,26,0.6) 0, transparent 38%),
-    radial-gradient(circle at 60% 55%, rgba(58,78,38,0.55) 0, transparent 42%),
-    radial-gradient(circle at 35% 78%, rgba(46,58,28,0.5) 0, transparent 40%),
-    radial-gradient(circle at 85% 20%, rgba(60,70,35,0.45) 0, transparent 36%),
-    radial-gradient(circle at 80% 80%, rgba(50,60,30,0.5) 0, transparent 38%),
-    repeating-linear-gradient(0deg, #8b968f 0 40px, #7a8580 40px 44px),
-    repeating-linear-gradient(90deg, transparent 0 64px, rgba(0,0,0,0.16) 64px 68px);
+  background-image: url("../assets/img/vorher.jpg");
+  clip-path: inset(0 50% 0 0);
 }
 .ba-tag {
   position: absolute;
