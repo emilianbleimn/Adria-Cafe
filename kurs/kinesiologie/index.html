@@ -1,0 +1,1467 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Kinesiologie Basiskurs · Muskel, Muskelfaser &amp; Rezeptoren</title>
+  <meta name="description" content="Kostenloser Anfängerkurs zur Bewegungslehre: Aufbau des Muskels, Sarkomer und Kontraktion, Muskelfasertypen (Typ I, IIa, IIx) sowie Rezeptoren und Propriozeption (Muskelspindel, Golgi-Sehnenorgan, Reflexe). Mit Abbildungen, Quiz, Karteikarten und Glossar." />
+  <meta name="theme-color" content="#f5f2ed" />
+  <meta property="og:title" content="Kinesiologie Basiskurs · Muskel, Muskelfaser &amp; Rezeptoren" />
+  <meta property="og:description" content="Anfängerkurs Bewegungslehre: Muskelaufbau, Kontraktion, Fasertypen und Propriozeption — mit Quiz, Karteikarten und Glossar." />
+  <meta property="og:type" content="website" />
+  <meta property="og:locale" content="de_DE" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,500;0,6..96,600;1,6..96,500&family=Archivo:wght@400;500;600;700&display=swap" rel="stylesheet" />
+
+  <link rel="icon" href="favicon.svg" type="image/svg+xml" />
+  <link rel="stylesheet" href="kurs.css" />
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Course",
+    "name": "Kinesiologie Basiskurs — Muskel, Muskelfaser und Rezeptoren",
+    "description": "Anfängerkurs zur Bewegungslehre: Aufbau und Kontraktion des Muskels, Muskelfasertypen sowie Rezeptoren und Propriozeption.",
+    "inLanguage": "de",
+    "educationalLevel": "Anfänger",
+    "isAccessibleForFree": true,
+    "teaches": ["Muskelaufbau", "Sarkomer und Gleitfilamenttheorie", "Motorische Einheit", "Muskelfasertypen", "Propriozeption", "Muskelspindel", "Golgi-Sehnenorgan", "Reflexe"],
+    "hasCourseInstance": {
+      "@type": "CourseInstance",
+      "courseMode": "online",
+      "courseWorkload": "PT3H"
+    }
+  }
+  </script>
+</head>
+<body>
+
+<header class="topbar">
+  <div class="topbar__inner">
+    <button class="icon-btn nav-btn" id="navBtn" aria-label="Kursnavigation öffnen" aria-expanded="false" aria-controls="sidebar">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+    </button>
+
+    <div class="brand">
+      <svg class="brand__mark" viewBox="0 0 40 40" aria-hidden="true">
+        <circle cx="20" cy="20" r="19" fill="none" stroke="currentColor" stroke-opacity="0.18" />
+        <path d="M8 20c4-9 20-9 24 0-4 9-20 9-24 0z" fill="none" stroke="var(--muscle)" stroke-width="2" stroke-linejoin="round"/>
+        <path d="M8 20h24" stroke="var(--nerve)" stroke-width="1.6" stroke-dasharray="3 3"/>
+        <circle cx="20" cy="20" r="3.2" fill="var(--nerve)"/>
+      </svg>
+      <div class="brand__text">
+        <div class="brand__title">Kinesiologie Basiskurs</div>
+        <div class="brand__sub">Muskel · Faser · Rezeptoren</div>
+      </div>
+    </div>
+
+    <div class="topbar__spacer"></div>
+
+    <div class="progress" title="Dein Kursfortschritt">
+      <span>Fortschritt</span>
+      <div class="progress__track"><div class="progress__bar" id="progressBar"></div></div>
+      <span class="progress__score" id="progressText">0/7</span>
+    </div>
+
+    <button class="icon-btn theme-btn" id="themeBtn" aria-label="Helles/dunkles Design umschalten">
+      <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg>
+      <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.8A9 9 0 1111.2 3a7 7 0 009.8 9.8z"/></svg>
+    </button>
+  </div>
+</header>
+
+<div class="scrim" id="scrim"></div>
+
+<div class="layout">
+
+  <aside class="sidebar" id="sidebar">
+    <p class="sidebar__label">Kursinhalt</p>
+    <ul class="toc" id="toc">
+      <li><a href="#modul-1" data-module="1"><span class="toc__num">1</span> Orientierung &amp; Begriffe</a></li>
+      <li><a href="#modul-2" data-module="2"><span class="toc__num">2</span> Der Muskel von außen nach innen</a></li>
+      <li><a href="#modul-3" data-module="3"><span class="toc__num">3</span> Wie Kontraktion entsteht</a></li>
+      <li><a href="#modul-4" data-module="4"><span class="toc__num">4</span> Muskelfasertypen</a></li>
+      <li><a href="#modul-5" data-module="5"><span class="toc__num">5</span> Rezeptoren &amp; Propriozeption</a></li>
+      <li><a href="#modul-6" data-module="6"><span class="toc__num">6</span> Reflexe im Zusammenspiel</a></li>
+      <li><a href="#modul-7" data-module="7"><span class="toc__num">7</span> Vom Wissen zur Praxis</a></li>
+    </ul>
+    <div class="sidebar__sep"></div>
+    <p class="sidebar__label">Üben</p>
+    <ul class="toc">
+      <li><a href="#abschlusstest"><span class="toc__num">★</span> Abschlusstest</a></li>
+      <li><a href="#karteikarten"><span class="toc__num">↺</span> Karteikarten</a></li>
+      <li><a href="#glossar"><span class="toc__num">A</span> Glossar</a></li>
+      <li><a href="#quellen"><span class="toc__num">§</span> Quellen &amp; Hinweise</a></li>
+    </ul>
+    <div class="sidebar__sep"></div>
+    <button class="sidebar__reset" id="resetBtn" type="button">Fortschritt zurücksetzen</button>
+  </aside>
+
+  <main class="content">
+
+    <section class="hero">
+      <p class="hero__eyebrow">Anfängerkurs · Bewegungslehre</p>
+      <h1>Muskel, <em>Muskelfaser</em> und Rezeptoren</h1>
+      <p class="hero__lead">
+        Ein Kurs für alle, die verstehen wollen, <strong>wie Bewegung wirklich entsteht</strong> —
+        vom Muskelbauch bis zum einzelnen Sarkomer, von der langsamen Haltefaser bis zur
+        explosiven Schnellkraftfaser, und von der Muskelspindel bis zum Reflexbogen im Rückenmark.
+        Kein Vorwissen nötig: Jedes Fachwort wird beim ersten Auftauchen erklärt.
+      </p>
+      <div class="hero__facts">
+        <span class="chip"><span class="chip__dot"></span> 7 Module</span>
+        <span class="chip"><span class="chip__dot"></span> ca. 3 Stunden</span>
+        <span class="chip"><span class="chip__dot"></span> 5 Abbildungen</span>
+        <span class="chip"><span class="chip__dot"></span> 30 Quizfragen</span>
+        <span class="chip"><span class="chip__dot"></span> 24 Karteikarten</span>
+        <span class="chip"><span class="chip__dot"></span> Glossar</span>
+      </div>
+    </section>
+
+    <!-- ============================ MODUL 1 ============================ -->
+    <section class="module" id="modul-1" data-module="1">
+      <div class="module__head">
+        <span class="module__num">Modul 1</span>
+        <span class="module__time">· ca. 15 Min.</span>
+        <h2>Orientierung: Worum es in diesem Kurs geht</h2>
+      </div>
+
+      <div class="goals">
+        <p class="goals__title">Lernziele</p>
+        <ul>
+          <li>Du kannst die beiden Bedeutungen des Wortes „Kinesiologie“ auseinanderhalten.</li>
+          <li>Du kennst die drei Ebenen, auf denen wir Bewegung betrachten: Struktur, Funktion, Steuerung.</li>
+          <li>Du beherrschst die Grundvokabeln: Agonist, Antagonist, Synergist, Ursprung, Ansatz.</li>
+          <li>Du kannst die drei Arbeitsweisen eines Muskels beschreiben.</li>
+        </ul>
+      </div>
+
+      <h3>Zwei sehr verschiedene Dinge heißen „Kinesiologie“</h3>
+      <p>
+        Das Wort geht auf griechisch <span class="lat">kínesis</span> (Bewegung) und
+        <span class="lat">lógos</span> (Lehre) zurück — „Bewegungslehre“. Im deutschen Sprachraum
+        bezeichnet es aber zwei Dinge, die nichts miteinander zu tun haben:
+      </p>
+      <div class="cards">
+        <div class="card card--muscle">
+          <h4>Kinesiologie als Wissenschaft</h4>
+          <p>
+            Die Lehre von der menschlichen Bewegung — Anatomie, Physiologie, Biomechanik und
+            motorische Steuerung. Grundlage von Sportwissenschaft, Physiotherapie und
+            Trainingslehre. <strong>Darum geht es in diesem Kurs.</strong>
+          </p>
+        </div>
+        <div class="card">
+          <h4>„Angewandte Kinesiologie“</h4>
+          <p>
+            Ein alternativmedizinisches Verfahren, das über einen „Muskeltest“ Aussagen zu
+            Allergien, Nahrungsmitteln oder seelischen Themen treffen will. Ihre diagnostischen
+            Ansprüche gelten als <strong>wissenschaftlich nicht belegt</strong>. Dieser Kurs
+            behandelt sie nicht.
+          </p>
+        </div>
+      </div>
+      <div class="note note--nerve">
+        <p class="note__title">Warum das gleich am Anfang steht</p>
+        <p>
+          Beide Richtungen benutzen dieselben Vokabeln — „Muskel“, „Reflex“, „Rezeptor“. Wenn du
+          weißt, was ein Golgi-Sehnenorgan physiologisch tatsächlich misst (nämlich Spannung, nicht
+          Wahrheit), kannst du Aussagen darüber selbst einordnen. Genau dafür ist Grundlagenwissen da.
+        </p>
+      </div>
+
+      <h3>Drei Ebenen, ein Thema</h3>
+      <p>
+        Der Kurs arbeitet sich von der Struktur zur Steuerung vor. Diese Reihenfolge ist kein Zufall:
+        Jede Ebene erklärt die nächste.
+      </p>
+      <ol class="steps">
+        <li><div><strong>Struktur — was ist da?</strong> Der Muskel als Organ: Hüllen, Bündel, Fasern, Myofibrillen, Sarkomere. (Modul 2)</div></li>
+        <li><div><strong>Funktion — was tut es?</strong> Wie aus einem elektrischen Impuls Zug entsteht, und warum verschiedene Fasern verschieden arbeiten. (Modul 3 &amp; 4)</div></li>
+        <li><div><strong>Steuerung — wer entscheidet?</strong> Wie das Nervensystem über Rezeptoren misst, was der Muskel gerade tut, und über Reflexe darauf reagiert. (Modul 5 &amp; 6)</div></li>
+      </ol>
+
+      <h3>Die Grundvokabeln</h3>
+      <p>
+        Ein Muskel überspannt mindestens ein Gelenk und verbindet zwei Knochen. Das
+        körpernähere, meist unbewegliche Ende heißt <span class="term">Ursprung</span>
+        (<span class="lat">Origo</span>), das körperfernere, bewegte Ende
+        <span class="term">Ansatz</span> (<span class="lat">Insertio</span>). Zieht sich der Muskel
+        zusammen, nähern sich Ursprung und Ansatz an — der Knochen bewegt sich um das Gelenk.
+      </p>
+      <p>Für jede Bewegung teilen sich Muskeln die Arbeit auf:</p>
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr><th>Rolle</th><th>Aufgabe</th><th>Beispiel: Ellenbogen beugen</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>Agonist</td><td>Führt die Bewegung aus („Spieler“)</td><td>M. biceps brachii</td></tr>
+            <tr><td>Antagonist</td><td>Gegenspieler, bremst und sichert</td><td>M. triceps brachii</td></tr>
+            <tr><td>Synergist</td><td>Unterstützt den Agonisten</td><td>M. brachialis, M. brachioradialis</td></tr>
+            <tr><td>Stabilisator</td><td>Hält benachbarte Gelenke ruhig</td><td>Schulterblattmuskulatur</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="key">
+        <span class="key__icon">🔑</span>
+        <p>Kein Muskel arbeitet allein. Wer nur den Agonisten betrachtet, versteht die Bewegung nicht.</p>
+      </div>
+
+      <h3>Drei Arbeitsweisen eines Muskels</h3>
+      <p>
+        „Anspannen“ heißt nicht automatisch „kürzer werden“. Entscheidend ist das Verhältnis
+        zwischen Muskelkraft und äußerer Last:
+      </p>
+      <div class="cards">
+        <div class="card card--muscle">
+          <h4>Konzentrisch</h4>
+          <p>Muskelkraft &gt; Last: Der Muskel <strong>verkürzt</strong> sich. Hantel wird gehoben.</p>
+        </div>
+        <div class="card card--muscle">
+          <h4>Exzentrisch</h4>
+          <p>Muskelkraft &lt; Last: Der Muskel <strong>wird unter Spannung gedehnt</strong> und bremst. Hantel wird kontrolliert abgesenkt. Hier sind die größten Kräfte möglich — und hier entsteht typischerweise Muskelkater.</p>
+        </div>
+        <div class="card card--muscle">
+          <h4>Isometrisch</h4>
+          <p>Muskelkraft = Last: Spannung ohne Längenänderung. Halten einer Position, z. B. Unterarmstütz.</p>
+        </div>
+      </div>
+      <div class="note">
+        <p class="note__title">Alltagstest</p>
+        <p>
+          Setz dich langsam auf einen Stuhl und steh wieder auf. Beim Hinsetzen arbeitet der
+          Oberschenkelstrecker exzentrisch (er bremst dich), beim Aufstehen konzentrisch. Halte auf
+          halbem Weg an: jetzt isometrisch. Derselbe Muskel, drei Arbeitsweisen — in vier Sekunden.
+        </p>
+      </div>
+
+      <div class="quiz" data-quiz="1"></div>
+      <div class="done-row">
+        <button class="btn done-btn" data-done="1" type="button">Modul als erledigt markieren</button>
+        <span class="done-hint">Dein Fortschritt wird nur lokal in diesem Browser gespeichert.</span>
+      </div>
+    </section>
+
+    <!-- ============================ MODUL 2 ============================ -->
+    <section class="module" id="modul-2" data-module="2">
+      <div class="module__head">
+        <span class="module__num">Modul 2</span>
+        <span class="module__time">· ca. 25 Min.</span>
+        <h2>Der Muskel von außen nach innen</h2>
+      </div>
+
+      <div class="goals">
+        <p class="goals__title">Lernziele</p>
+        <ul>
+          <li>Du kannst die Bauebenen vom Muskelbauch bis zum Sarkomer in der richtigen Reihenfolge nennen.</li>
+          <li>Du weißt, welche Bindegewebshülle zu welcher Ebene gehört — und wohin sie führt.</li>
+          <li>Du kannst erklären, warum die Muskelfaser eine ungewöhnliche Zelle ist.</li>
+          <li>Du verstehst, warum Skelettmuskulatur „quergestreift“ aussieht.</li>
+        </ul>
+      </div>
+
+      <h3>Fünf Ebenen, immer dasselbe Prinzip</h3>
+      <p>
+        Ein Muskel ist gebaut wie ein Kabel aus Kabeln: Jede Ebene besteht aus vielen parallel
+        liegenden Einheiten der nächstkleineren Ebene, und jede Ebene ist in eine eigene
+        Bindegewebshülle eingepackt. Diese Hüllen sind kein Verpackungsmaterial — sie
+        <strong>übertragen Kraft</strong> und laufen am Ende alle in der Sehne zusammen.
+      </p>
+
+      <figure class="figure">
+        <svg viewBox="0 0 720 220" role="img" aria-label="Fünf Bauebenen des Skelettmuskels: Muskel, Faszikel, Muskelfaser, Myofibrille, Sarkomer">
+          <defs>
+            <marker id="arw" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto">
+              <path d="M0 0 L10 5 L0 10 z" fill="var(--muted)"/>
+            </marker>
+          </defs>
+
+          <!-- Panel 1: Muskel -->
+          <text class="svg-label svg-label--lead" x="72" y="30" text-anchor="middle">Muskel</text>
+          <rect x="8" y="52" width="128" height="112" rx="10" fill="var(--surface)" stroke="var(--line)"/>
+          <path d="M22 108 C42 72 102 72 122 108 C102 144 42 144 22 108 Z" fill="var(--muscle)" fill-opacity="0.18" stroke="var(--muscle)" stroke-width="1.6"/>
+          <path d="M14 108 h8 M122 108 h8" stroke="var(--muted)" stroke-width="3" stroke-linecap="round"/>
+          <text class="svg-label--sm" x="72" y="184" text-anchor="middle">Hülle: Epimysium</text>
+          <text class="svg-label--sm" x="72" y="200" text-anchor="middle">cm-Bereich</text>
+
+          <!-- Panel 2: Faszikel -->
+          <text class="svg-label svg-label--lead" x="216" y="30" text-anchor="middle">Faszikel</text>
+          <rect x="152" y="52" width="128" height="112" rx="10" fill="var(--surface)" stroke="var(--line)"/>
+          <rect x="174" y="76" width="84" height="64" rx="16" fill="none" stroke="var(--muscle)" stroke-width="1.6"/>
+          <g fill="var(--muscle)" fill-opacity="0.32" stroke="var(--muscle)" stroke-width="1">
+            <circle cx="196" cy="96" r="9"/><circle cx="216" cy="96" r="9"/><circle cx="236" cy="96" r="9"/>
+            <circle cx="186" cy="118" r="9"/><circle cx="206" cy="118" r="9"/><circle cx="226" cy="118" r="9"/><circle cx="246" cy="118" r="9"/>
+          </g>
+          <text class="svg-label--sm" x="216" y="184" text-anchor="middle">Hülle: Perimysium</text>
+          <text class="svg-label--sm" x="216" y="200" text-anchor="middle">mm-Bereich</text>
+
+          <!-- Panel 3: Muskelfaser -->
+          <text class="svg-label svg-label--lead" x="360" y="30" text-anchor="middle">Muskelfaser</text>
+          <rect x="296" y="52" width="128" height="112" rx="10" fill="var(--surface)" stroke="var(--line)"/>
+          <rect x="308" y="90" width="104" height="36" rx="18" fill="var(--muscle)" fill-opacity="0.18" stroke="var(--muscle)" stroke-width="1.6"/>
+          <g stroke="var(--muscle)" stroke-width="1" stroke-opacity="0.55">
+            <path d="M324 92v32M336 92v32M348 92v32M360 92v32M372 92v32M384 92v32M396 92v32"/>
+          </g>
+          <g fill="var(--nerve)"><ellipse cx="330" cy="96" rx="5" ry="3.4"/><ellipse cx="384" cy="120" rx="5" ry="3.4"/></g>
+          <text class="svg-label--sm" x="360" y="184" text-anchor="middle">Hülle: Endomysium</text>
+          <text class="svg-label--sm" x="360" y="200" text-anchor="middle">10–100 µm dick</text>
+
+          <!-- Panel 4: Myofibrille -->
+          <text class="svg-label svg-label--lead" x="504" y="30" text-anchor="middle">Myofibrille</text>
+          <rect x="440" y="52" width="128" height="112" rx="10" fill="var(--surface)" stroke="var(--line)"/>
+          <rect x="452" y="96" width="104" height="24" rx="6" fill="var(--surface-2)" stroke="var(--muscle)" stroke-width="1.4"/>
+          <g fill="var(--nerve)" fill-opacity="0.6">
+            <rect x="458" y="96" width="7" height="24"/><rect x="475" y="96" width="7" height="24"/>
+            <rect x="492" y="96" width="7" height="24"/><rect x="509" y="96" width="7" height="24"/>
+            <rect x="526" y="96" width="7" height="24"/><rect x="543" y="96" width="7" height="24"/>
+          </g>
+          <text class="svg-label--sm" x="504" y="184" text-anchor="middle">im Zellinneren</text>
+          <text class="svg-label--sm" x="504" y="200" text-anchor="middle">ca. 1–2 µm dick</text>
+
+          <!-- Panel 5: Sarkomer -->
+          <text class="svg-label svg-label--lead" x="648" y="30" text-anchor="middle">Sarkomer</text>
+          <rect x="584" y="52" width="128" height="112" rx="10" fill="var(--surface)" stroke="var(--line)"/>
+          <g stroke="var(--nerve)" stroke-width="3" stroke-linecap="round">
+            <path d="M600 88v40M696 88v40"/>
+          </g>
+          <g stroke="var(--muscle)" stroke-width="1.6">
+            <path d="M600 96h34M600 108h34M600 120h34M696 96h-34M696 108h-34M696 120h-34"/>
+          </g>
+          <rect x="628" y="100" width="40" height="16" rx="4" fill="var(--muscle)" fill-opacity="0.5" stroke="var(--muscle)"/>
+          <text class="svg-label--sm" x="648" y="184" text-anchor="middle">kleinste Baueinheit</text>
+          <text class="svg-label--sm" x="648" y="200" text-anchor="middle">ca. 2–2,5 µm lang</text>
+
+          <!-- Pfeile -->
+          <g stroke="var(--muted)" stroke-width="1.4" marker-end="url(#arw)">
+            <path d="M138 108h10"/><path d="M282 108h10"/><path d="M426 108h10"/><path d="M570 108h10"/>
+          </g>
+        </svg>
+        <figcaption>
+          <strong>Abb. 1 — Bauebenen des Skelettmuskels.</strong> Von links nach rechts wird jeweils
+          eine Ebene „aufgeschnitten“: Der Muskel besteht aus Faszikeln, der Faszikel aus Muskelfasern,
+          die Faser aus Myofibrillen, die Myofibrille aus in Reihe geschalteten Sarkomeren. Die türkisen
+          Vertikalstreifen in Panel 4 sind die Z-Scheiben — sie erzeugen die Querstreifung.
+        </figcaption>
+      </figure>
+
+      <h3>Die Hüllen — Verpackung, die zieht</h3>
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr><th>Hülle</th><th>Umhüllt</th><th>Bedeutung</th></tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Epimysium</td>
+              <td>den ganzen Muskelbauch</td>
+              <td>Grenzt den Muskel gegen Nachbarmuskeln ab, lässt ihn gleiten; geht in die Faszie über</td>
+            </tr>
+            <tr>
+              <td>Perimysium</td>
+              <td>jeden Faszikel (Faserbündel)</td>
+              <td>Leitstraße für Gefäße und Nerven ins Muskelinnere</td>
+            </tr>
+            <tr>
+              <td>Endomysium</td>
+              <td>jede einzelne Muskelfaser</td>
+              <td>Trägt Kapillaren; überträgt Kraft seitlich auf Nachbarfasern</td>
+            </tr>
+            <tr>
+              <td>Sehne <span class="lat">(Tendo)</span></td>
+              <td>Fortsetzung aller drei Hüllen</td>
+              <td>Überträgt die Kraft auf den Knochen; speichert elastische Energie</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="key">
+        <span class="key__icon">🔑</span>
+        <p>Epi- = außen herum, Peri- = um das Bündel, Endo- = um die einzelne Faser. Alle drei enden in der Sehne.</p>
+      </div>
+
+      <h3>Die Muskelfaser ist eine sehr ungewöhnliche Zelle</h3>
+      <p>
+        <span class="term">Muskelfaser = Muskelzelle.</span> Beide Wörter meinen dasselbe. Sie
+        entsteht in der Entwicklung dadurch, dass viele Vorläuferzellen miteinander verschmelzen —
+        mit ungewöhnlichen Folgen:
+      </p>
+      <ul>
+        <li><strong>Vielkernig:</strong> Eine einzige Faser hat hunderte bis tausende Zellkerne, die direkt unter der Zellmembran liegen. Jeder versorgt „seinen“ Abschnitt der Faser.</li>
+        <li><strong>Sehr lang:</strong> 10–100 µm dünn (ein Haar hat ca. 70 µm), aber je nach Muskel mehrere Zentimeter lang — teils über die ganze Muskellänge.</li>
+        <li><strong>Vollgepackt:</strong> Der Zellinnenraum (<span class="term">Sarkoplasma</span>) enthält hunderte Myofibrillen, dazu Mitochondrien (Energie), Glykogen (Treibstoff) und Myoglobin (Sauerstoffspeicher).</li>
+        <li><strong>Zwei Spezialsysteme:</strong> Das <span class="term">sarkoplasmatische Retikulum</span> ist ein Kalzium-Speicher, der die Myofibrillen wie ein Netz umgibt. Die <span class="term">T-Tubuli</span> sind schlauchförmige Einstülpungen der Zellmembran (<span class="term">Sarkolemm</span>), die das elektrische Signal von außen ins Faserinnere tragen.</li>
+        <li><strong>Mit Reservezellen:</strong> Zwischen Sarkolemm und Endomysium sitzen <span class="term">Satellitenzellen</span> — ruhende Stammzellen, die bei Belastung oder Verletzung neue Zellkerne beisteuern. Sie sind ein Grund, warum Muskeln überhaupt wachsen und heilen können.</li>
+      </ul>
+
+      <h3>Warum „quergestreift“?</h3>
+      <p>
+        Unter dem Mikroskop zeigt Skelettmuskulatur ein regelmäßiges Streifenmuster. Der Grund ist
+        reine Ordnung: Die Sarkomere aller Myofibrillen einer Faser liegen exakt auf gleicher Höhe
+        nebeneinander. Dadurch addieren sich ihre dunklen und hellen Zonen zu durchgehenden Querstreifen.
+        Herzmuskulatur ist ebenfalls quergestreift, glatte Muskulatur (Darm, Gefäße) nicht — dort sind
+        die Filamente unregelmäßig angeordnet.
+      </p>
+
+      <h3>Ein Wort zur Muskelarchitektur</h3>
+      <p>
+        Nicht in jedem Muskel laufen die Fasern längs. Bei <span class="term">parallelfaserigen</span>
+        Muskeln (z. B. M. sartorius) ziehen sie in Zugrichtung — das ergibt viel Weg und hohe
+        Kontraktionsgeschwindigkeit. Bei <span class="term">gefiederten</span> Muskeln (z. B. M. rectus
+        femoris) setzen sie schräg an einer Sehnenplatte an — auf gleichem Volumen passen deutlich mehr
+        Fasern nebeneinander, was viel Kraft bei kürzerem Weg ergibt.
+      </p>
+      <div class="note note--muscle">
+        <p class="note__title">Merke</p>
+        <p>
+          Kraft entsteht nicht nur aus „viel Muskel“, sondern aus der Zahl parallel geschalteter
+          Fasern (Querschnittsfläche), Bewegungsweg dagegen aus der Zahl in Reihe geschalteter
+          Sarkomere (Faserlänge). Parallel = Kraft, in Reihe = Weg und Geschwindigkeit.
+        </p>
+      </div>
+
+      <div class="quiz" data-quiz="2"></div>
+      <div class="done-row">
+        <button class="btn done-btn" data-done="2" type="button">Modul als erledigt markieren</button>
+      </div>
+    </section>
+
+    <!-- ============================ MODUL 3 ============================ -->
+    <section class="module" id="modul-3" data-module="3">
+      <div class="module__head">
+        <span class="module__num">Modul 3</span>
+        <span class="module__time">· ca. 30 Min.</span>
+        <h2>Wie aus einem Nervenimpuls Kraft wird</h2>
+      </div>
+
+      <div class="goals">
+        <p class="goals__title">Lernziele</p>
+        <ul>
+          <li>Du kannst die motorische Einheit definieren und ihre Größe deuten.</li>
+          <li>Du kannst den Weg vom Aktionspotenzial bis zur Verkürzung in Schritten erklären.</li>
+          <li>Du kannst die Gleitfilamenttheorie in einem Satz zusammenfassen — und sagen, welche Bande gleich bleibt.</li>
+          <li>Du verstehst, wieso der Körper Kraft dosieren kann, obwohl jede Faser nur „ganz oder gar nicht“ arbeitet.</li>
+        </ul>
+      </div>
+
+      <h3>Die motorische Einheit</h3>
+      <p>
+        <span class="term">Eine motorische Einheit</span> = ein α-Motoneuron (Nervenzelle im Rückenmark)
+        plus <em>alle</em> Muskelfasern, die es versorgt. Sie ist die kleinste Einheit, die das
+        Nervensystem ansteuern kann. Feuert das Motoneuron, kontrahieren <strong>alle</strong> seine
+        Fasern gleichzeitig und maximal — auf Faserebene gilt das
+        <span class="term">Alles-oder-Nichts-Prinzip</span>. Eine halb angespannte Faser gibt es nicht.
+      </p>
+      <p>
+        Wie viele Fasern an einem Motoneuron hängen (das <span class="term">Innervationsverhältnis</span>),
+        verrät, wie fein ein Muskel gesteuert wird:
+      </p>
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr><th>Muskel</th><th>Fasern pro Motoneuron</th><th>Bedeutung</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>Äußere Augenmuskeln</td><td>ca. 5–10</td><td>Feinste Steuerung, minimale Kraft</td></tr>
+            <tr><td>Handbinnenmuskeln</td><td>ca. 100</td><td>Präzise Greifbewegungen</td></tr>
+            <tr><td>M. gastrocnemius (Wade)</td><td>ca. 1.000–2.000</td><td>Grobe, kraftvolle Arbeit</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <h4>Wenn jede Faser nur „ganz oder gar nicht“ kann — wie dosiert man dann Kraft?</h4>
+      <p>Über zwei Stellschrauben, die das Nervensystem stufenlos kombiniert:</p>
+      <ul>
+        <li>
+          <strong>Rekrutierung</strong> — es werden mehr oder weniger motorische Einheiten
+          eingeschaltet. Dabei gilt das <span class="term">Größenordnungsprinzip</span>
+          (Henneman): Kleine, leicht erregbare Motoneurone feuern zuerst; erst bei steigendem Bedarf
+          kommen die großen dazu. Deshalb arbeiten bei leichter Last die ausdauernden Typ-I-Fasern,
+          bei hoher oder sehr schneller Last zusätzlich die kräftigen Typ-II-Fasern.
+        </li>
+        <li>
+          <strong>Frequenzierung</strong> — dasselbe Motoneuron feuert schneller hintereinander.
+          Kommen die Impulse dichter, als die Faser entspannen kann, addieren sich die Einzelzuckungen
+          zum glatten <span class="term">Tetanus</span>: die maximale Dauerkraft der Faser.
+        </li>
+      </ul>
+      <div class="key">
+        <span class="key__icon">🔑</span>
+        <p>Kraftsteigerung = mehr Einheiten (Rekrutierung) + höhere Impulsrate (Frequenzierung). Beides zusammen ergibt eine feine, stufenlose Dosierung.</p>
+      </div>
+
+      <h3>Der Weg vom Signal zur Verkürzung</h3>
+      <ol class="steps">
+        <li><div><strong>Aktionspotenzial</strong> läuft vom α-Motoneuron über dessen Axon zum Muskel.</div></li>
+        <li><div><strong>Motorische Endplatte:</strong> Der Nerv schüttet den Botenstoff <span class="term">Acetylcholin</span> aus. Er bindet an der Muskelfaser und löst dort ein eigenes Aktionspotenzial aus.</div></li>
+        <li><div><strong>T-Tubuli:</strong> Die Erregung läuft über das Sarkolemm und durch die T-Tubuli tief ins Faserinnere — jede Myofibrille wird praktisch gleichzeitig erreicht.</div></li>
+        <li><div><strong>Kalzium-Freisetzung:</strong> Das sarkoplasmatische Retikulum öffnet seine Speicher und schüttet <span class="term">Ca²⁺</span> ins Sarkoplasma.</div></li>
+        <li><div><strong>Freischalten:</strong> Ca²⁺ bindet an <span class="term">Troponin</span>. Das verschiebt den Faden <span class="term">Tropomyosin</span>, der bis dahin die Bindungsstellen auf dem Aktin verdeckt hat. Die Stellen liegen frei.</div></li>
+        <li><div><strong>Querbrückenzyklus:</strong> Myosinköpfe binden an Aktin, kippen um (Kraftschlag) und ziehen das Aktin Richtung Sarkomermitte. Ein neues ATP löst den Kopf wieder, dessen Spaltung spannt ihn erneut. Der Zyklus läuft viele Male pro Sekunde.</div></li>
+        <li><div><strong>Verkürzung:</strong> Millionen Sarkomere in Reihe verkürzen sich gleichzeitig — der Muskel entwickelt Zug.</div></li>
+        <li><div><strong>Entspannung:</strong> Bleibt das Signal aus, pumpt das sarkoplasmatische Retikulum Ca²⁺ aktiv zurück (kostet ebenfalls ATP). Tropomyosin verdeckt wieder, die Köpfe lösen sich, der Muskel wird weich.</div></li>
+      </ol>
+      <div class="note note--energy">
+        <p class="note__title">Merkhilfe</p>
+        <p>
+          ATP wird nicht zum Anspannen gebraucht, sondern zum <em>Lösen</em> der Querbrücken und zum
+          Zurückpumpen des Kalziums. Genau darum wird ein Körper nach dem Tod steif
+          (<span class="lat">Rigor mortis</span>): Ohne ATP bleiben die Myosinköpfe am Aktin hängen.
+        </p>
+      </div>
+
+      <h3>Gleitfilamenttheorie: nichts wird kürzer, alles gleitet</h3>
+      <p>
+        Der wichtigste Satz dieses Moduls: <strong>Aktin- und Myosinfilamente behalten ihre Länge.</strong>
+        Sie schieben sich nur weiter ineinander. Das Sarkomer wird kürzer, weil die Z-Scheiben
+        zusammenrücken — nicht, weil die Filamente schrumpfen.
+      </p>
+
+      <figure class="figure">
+        <svg viewBox="0 0 720 330" role="img" aria-label="Sarkomer im entspannten und kontrahierten Zustand mit Z-Scheibe, I-Bande, A-Bande, H-Zone und M-Linie">
+          <defs>
+            <marker id="tick" viewBox="0 0 6 6" refX="3" refY="3" markerWidth="4" markerHeight="4"><circle cx="3" cy="3" r="2" fill="var(--muted)"/></marker>
+            <marker id="ar2" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="5" markerHeight="5" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="var(--muted)"/></marker>
+            <marker id="ar2s" viewBox="0 0 10 10" refX="1" refY="5" markerWidth="5" markerHeight="5" orient="auto"><path d="M10 0 L0 5 L10 10 z" fill="var(--muted)"/></marker>
+          </defs>
+
+          <!-- Bandenbeschriftung -->
+          <text class="svg-label--sm" x="175" y="40" text-anchor="middle">I-Bande</text>
+          <text class="svg-label--sm" x="320" y="40" text-anchor="middle">A-Bande (Länge bleibt konstant)</text>
+          <text class="svg-label--sm" x="465" y="40" text-anchor="middle">I-Bande</text>
+          <g stroke="var(--muted)" stroke-width="1">
+            <path d="M120 48h110M230 48h180M410 48h110"/>
+            <path d="M120 44v8M230 44v8M410 44v8M520 44v8"/>
+          </g>
+          <text class="svg-label--sm" x="320" y="66" text-anchor="middle">H-Zone</text>
+          <g stroke="var(--muted)" stroke-width="1">
+            <path d="M272 72h96M272 68v8M368 68v8"/>
+          </g>
+
+          <!-- Zeile 1: entspannt -->
+          <text class="svg-label" x="16" y="124">Entspannt</text>
+          <g stroke="var(--muscle)" stroke-width="2.6" stroke-linecap="round">
+            <path d="M120 104h152M120 136h152M520 104h-152M520 136h-152"/>
+          </g>
+          <rect x="230" y="115" width="180" height="10" rx="4" fill="var(--muscle)" fill-opacity="0.75"/>
+          <g stroke="var(--muscle)" stroke-width="1.6" stroke-opacity="0.8">
+            <path d="M238 115l-6-9M252 115l-6-9M266 115l-6-9M238 125l-6 9M252 125l-6 9M266 125l-6 9"/>
+            <path d="M374 115l6-9M388 115l6-9M402 115l6-9M374 125l6 9M388 125l6 9M402 125l6 9"/>
+          </g>
+          <path d="M320 104v32" stroke="var(--muted)" stroke-width="1.6" stroke-dasharray="3 3"/>
+          <g fill="var(--nerve)"><rect x="117" y="88" width="6" height="64" rx="2"/><rect x="517" y="88" width="6" height="64" rx="2"/></g>
+          <text class="svg-label--sm" x="120" y="172" text-anchor="middle">Z-Scheibe</text>
+          <text class="svg-label--sm" x="320" y="172" text-anchor="middle">M-Linie</text>
+          <text class="svg-label--sm" x="520" y="172" text-anchor="middle">Z-Scheibe</text>
+          <g stroke="var(--muted)" stroke-width="1" marker-end="url(#ar2)" marker-start="url(#ar2s)">
+            <path d="M120 190h400"/>
+          </g>
+          <text class="svg-label--sm" x="320" y="206" text-anchor="middle">Sarkomerlänge (ca. 2,2 µm)</text>
+
+          <!-- Zeile 2: kontrahiert -->
+          <text class="svg-label" x="16" y="248">Kontrahiert</text>
+          <g stroke="var(--muscle)" stroke-width="2.6" stroke-linecap="round">
+            <path d="M160 228h155M160 260h155M480 228h-155M480 260h-155"/>
+          </g>
+          <rect x="230" y="239" width="180" height="10" rx="4" fill="var(--muscle)" fill-opacity="0.75"/>
+          <g stroke="var(--muscle)" stroke-width="1.6" stroke-opacity="0.8">
+            <path d="M240 239l-6-9M258 239l-6-9M276 239l-6-9M294 239l-6-9M240 249l-6 9M258 249l-6 9M276 249l-6 9M294 249l-6 9"/>
+            <path d="M346 239l6-9M364 239l6-9M382 239l6-9M400 239l6-9M346 249l6 9M364 249l6 9M382 249l6 9M400 249l6 9"/>
+          </g>
+          <path d="M320 228v32" stroke="var(--muted)" stroke-width="1.6" stroke-dasharray="3 3"/>
+          <g fill="var(--nerve)"><rect x="157" y="212" width="6" height="64" rx="2"/><rect x="477" y="212" width="6" height="64" rx="2"/></g>
+          <g stroke="var(--muted)" stroke-width="1" marker-end="url(#ar2)" marker-start="url(#ar2s)">
+            <path d="M160 296h320"/>
+          </g>
+          <text class="svg-label--sm" x="320" y="312" text-anchor="middle">verkürzt (ca. 1,8 µm) — I-Bande und H-Zone schrumpfen</text>
+        </svg>
+        <figcaption>
+          <strong>Abb. 2 — Das Sarkomer.</strong> Die dünnen Linien sind Aktinfilamente, der dicke Balken
+          in der Mitte ist das Myosinfilament mit seinen Querbrücken (Myosinköpfen). Beim Vergleich beider
+          Zeilen sieht man das Entscheidende: Die <em>A-Bande</em> (Ausdehnung des Myosins) ist oben und
+          unten exakt gleich lang. Kürzer werden nur die I-Bande und die H-Zone — also die Bereiche ohne
+          Überlappung. Die Filamente sind ineinandergeglitten.
+        </figcaption>
+      </figure>
+
+      <div class="table-wrap">
+        <table>
+          <thead><tr><th>Struktur</th><th>Was sie ist</th><th>Bei Kontraktion</th></tr></thead>
+          <tbody>
+            <tr><td>Z-Scheibe</td><td>Begrenzung des Sarkomers, Verankerung der Aktinfilamente</td><td>rücken zusammen</td></tr>
+            <tr><td>I-Bande</td><td>Nur Aktin (heller Bereich)</td><td>wird schmaler</td></tr>
+            <tr><td>A-Bande</td><td>Ausdehnung des Myosins (dunkler Bereich)</td><td><strong>bleibt gleich</strong></td></tr>
+            <tr><td>H-Zone</td><td>Myosin ohne Aktin-Überlappung</td><td>wird schmaler bis fast null</td></tr>
+            <tr><td>M-Linie</td><td>Verankerung der Myosinfilamente in der Mitte</td><td>bleibt Mittelpunkt</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <h3>Zwei Gesetzmäßigkeiten, die daraus folgen</h3>
+      <div class="cards">
+        <div class="card card--muscle">
+          <h4>Kraft-Längen-Beziehung</h4>
+          <p>
+            Maximale Kraft entsteht bei <strong>mittlerer</strong> Sarkomerlänge — dort ist die Überlappung
+            von Aktin und Myosin optimal. Stark gedehnt fehlen Querbrücken, stark verkürzt behindern sich
+            die Filamente. Deshalb ist jeder Muskel in einem bestimmten Gelenkwinkel am stärksten.
+          </p>
+        </div>
+        <div class="card card--muscle">
+          <h4>Kraft-Geschwindigkeits-Beziehung</h4>
+          <p>
+            Je schneller sich ein Muskel verkürzt, desto weniger Kraft kann er entwickeln — bei hohem Tempo
+            bleibt den Querbrücken zu wenig Zeit zum Binden. Umgekehrt kann er beim <em>Bremsen</em>
+            (exzentrisch) mehr Kraft aufbringen als bei jeder anderen Arbeitsweise.
+          </p>
+        </div>
+      </div>
+
+      <div class="quiz" data-quiz="3"></div>
+      <div class="done-row">
+        <button class="btn done-btn" data-done="3" type="button">Modul als erledigt markieren</button>
+      </div>
+    </section>
+
+    <!-- ============================ MODUL 4 ============================ -->
+    <section class="module" id="modul-4" data-module="4">
+      <div class="module__head">
+        <span class="module__num">Modul 4</span>
+        <span class="module__time">· ca. 30 Min.</span>
+        <h2>Muskelfasertypen: langsam, schnell, dazwischen</h2>
+      </div>
+
+      <div class="goals">
+        <p class="goals__title">Lernziele</p>
+        <ul>
+          <li>Du kannst Typ I, Typ IIa und Typ IIx anhand von Stoffwechsel, Tempo, Kraft und Ermüdung unterscheiden.</li>
+          <li>Du weißt, welche Fasern bei welcher Belastung überhaupt zum Einsatz kommen.</li>
+          <li>Du kannst einschätzen, was Training am Fasertypmuster verändert — und was nicht.</li>
+          <li>Du kennst den Grund, warum Krafttraining im Alter besonders wichtig ist.</li>
+        </ul>
+      </div>
+
+      <h3>Nicht jede Faser ist gleich gebaut</h3>
+      <p>
+        Ein Muskel muss zwei sehr verschiedene Aufgaben erfüllen: stundenlang eine Haltung halten —
+        und in Sekundenbruchteilen maximale Kraft liefern. Ein einziger Fasertyp kann beides nicht.
+        Deshalb enthält fast jeder Skelettmuskel eine Mischung. Eingeteilt werden die Fasern nach der
+        Bauform ihres Myosins (der <span class="term">Myosin-Schwerketten-Isoform</span>) und nach ihrem
+        Energiestoffwechsel.
+      </p>
+
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr>
+              <th>Merkmal</th>
+              <th>Typ I<br /><span class="lat">slow oxidative</span></th>
+              <th>Typ IIa<br /><span class="lat">fast oxidative-glycolytic</span></th>
+              <th>Typ IIx<br /><span class="lat">fast glycolytic</span></th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td>Andere Namen</td><td>ST, rote Faser, Slow-Twitch</td><td>FTa, intermediäre Faser</td><td>FTx, FG, weiße Faser (früher „IIb“)</td></tr>
+            <tr><td>Kontraktionsgeschwindigkeit</td><td>langsam</td><td>schnell</td><td>sehr schnell</td></tr>
+            <tr><td>Kraft pro Faser</td><td>gering</td><td>hoch</td><td>sehr hoch</td></tr>
+            <tr><td>Ermüdungswiderstand</td><td>sehr hoch</td><td>mittel bis hoch</td><td>gering</td></tr>
+            <tr><td>Energiegewinnung</td><td>aerob (mit Sauerstoff)</td><td>gemischt</td><td>anaerob-glykolytisch</td></tr>
+            <tr><td>Mitochondrien</td><td>sehr viele</td><td>viele</td><td>wenige</td></tr>
+            <tr><td>Kapillardichte</td><td>hoch</td><td>mittel</td><td>gering</td></tr>
+            <tr><td>Myoglobin (Farbe)</td><td>viel → rötlich</td><td>mittel</td><td>wenig → blass</td></tr>
+            <tr><td>Motorische Einheit</td><td>klein, früh rekrutiert</td><td>mittel</td><td>groß, zuletzt rekrutiert</td></tr>
+            <tr><td>Typische Aufgabe</td><td>Haltung, Ausdauer, Gehen</td><td>zügiges Laufen, Kraftausdauer</td><td>Sprint, Sprung, Wurf, Maximalkraft</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <figure class="figure">
+        <svg viewBox="0 0 720 305" role="img" aria-label="Balkenvergleich der Muskelfasertypen I, IIa und IIx in vier Eigenschaften">
+          <!-- Legende -->
+          <g>
+            <rect x="180" y="12" width="12" height="12" rx="3" fill="var(--nerve)"/>
+            <text class="svg-label--sm" x="198" y="22">Typ I</text>
+            <rect x="256" y="12" width="12" height="12" rx="3" fill="var(--energy)"/>
+            <text class="svg-label--sm" x="274" y="22">Typ IIa</text>
+            <rect x="336" y="12" width="12" height="12" rx="3" fill="var(--muscle)"/>
+            <text class="svg-label--sm" x="354" y="22">Typ IIx</text>
+            <text class="svg-label--sm" x="660" y="22" text-anchor="end">relative Werte, schematisch</text>
+          </g>
+
+          <!-- Gruppe 1 -->
+          <text class="svg-label" x="168" y="78" text-anchor="end">Kontraktionstempo</text>
+          <g rx="3">
+            <rect x="180" y="60" width="132" height="12" rx="3" fill="var(--nerve)"/>
+            <rect x="180" y="76" width="330" height="12" rx="3" fill="var(--energy)"/>
+            <rect x="180" y="92" width="440" height="12" rx="3" fill="var(--muscle)"/>
+          </g>
+          <!-- Gruppe 2 -->
+          <text class="svg-label" x="168" y="140" text-anchor="end">Kraft pro Faser</text>
+          <g>
+            <rect x="180" y="122" width="154" height="12" rx="3" fill="var(--nerve)"/>
+            <rect x="180" y="138" width="343" height="12" rx="3" fill="var(--energy)"/>
+            <rect x="180" y="154" width="440" height="12" rx="3" fill="var(--muscle)"/>
+          </g>
+          <!-- Gruppe 3 -->
+          <text class="svg-label" x="168" y="202" text-anchor="end">Ermüdungswiderstand</text>
+          <g>
+            <rect x="180" y="184" width="440" height="12" rx="3" fill="var(--nerve)"/>
+            <rect x="180" y="200" width="264" height="12" rx="3" fill="var(--energy)"/>
+            <rect x="180" y="216" width="97" height="12" rx="3" fill="var(--muscle)"/>
+          </g>
+          <!-- Gruppe 4 -->
+          <text class="svg-label" x="168" y="264" text-anchor="end">Mitochondrien</text>
+          <text class="svg-label--sm" x="168" y="278" text-anchor="end">&amp; Kapillaren</text>
+          <g>
+            <rect x="180" y="246" width="440" height="12" rx="3" fill="var(--nerve)"/>
+            <rect x="180" y="262" width="299" height="12" rx="3" fill="var(--energy)"/>
+            <rect x="180" y="278" width="123" height="12" rx="3" fill="var(--muscle)"/>
+          </g>
+          <!-- Grundlinie -->
+          <path d="M180 52v244" stroke="var(--line)" stroke-width="1"/>
+        </svg>
+        <figcaption>
+          <strong>Abb. 3 — Fasertypen im Vergleich.</strong> Die Muster sind gegenläufig: Was an Tempo und
+          Kraft gewonnen wird, geht beim Ermüdungswiderstand verloren. Typ IIa liegt in allen vier
+          Eigenschaften dazwischen — er ist der Allrounder und zugleich der Fasertyp, der am stärksten auf
+          Training reagiert.
+        </figcaption>
+      </figure>
+
+      <h3>Wer arbeitet wann? Das Größenordnungsprinzip in der Praxis</h3>
+      <p>
+        Fasern werden nicht nach Wunsch ausgewählt, sondern nach Bedarf zugeschaltet — immer in
+        derselben Reihenfolge (siehe Modul 3):
+      </p>
+      <ol class="steps">
+        <li><div><strong>Spazieren gehen, ruhig stehen:</strong> fast ausschließlich Typ I. Deshalb ermüdest du dabei kaum.</div></li>
+        <li><div><strong>Zügiges Radfahren, mittlere Lasten:</strong> Typ I plus zunehmend Typ IIa.</div></li>
+        <li><div><strong>Sprint, Sprung, schweres Heben, letzte Wiederholungen bis zur Erschöpfung:</strong> zusätzlich Typ IIx — die stärksten, aber schnell ermüdenden Einheiten.</div></li>
+      </ol>
+      <div class="note note--nerve">
+        <p class="note__title">Wichtige Konsequenz</p>
+        <p>
+          An die Typ-II-Fasern kommst du nur über <strong>hohe Last</strong> oder <strong>hohe
+          Bewegungsabsicht/-geschwindigkeit</strong> — oder dadurch, dass du einen leichten Satz so weit
+          führst, dass die kleinen Einheiten ermüden und die großen einspringen müssen. Leichtes Training
+          mit halbherzigem Tempo und viel Reserve erreicht sie schlicht nicht.
+        </p>
+      </div>
+
+      <h3>Was Training verändert — und was nicht</h3>
+      <ul>
+        <li>
+          <strong>Sehr gut veränderbar:</strong> die Eigenschaften <em>innerhalb</em> eines Fasertyps.
+          Ausdauertraining vermehrt Mitochondrien, Kapillaren und Enzyme; Krafttraining vergrößert den
+          Faserquerschnitt (Hypertrophie), wobei Typ-II-Fasern deutlich stärker zulegen.
+        </li>
+        <li>
+          <strong>Gut veränderbar:</strong> die Verteilung <em>innerhalb</em> der Typ-II-Familie.
+          Regelmäßiges Training verschiebt Fasern von IIx Richtung IIa — die „Rohlinge“ werden zu
+          ermüdungsresistenteren Allroundern. Bei längerer Inaktivität geht es zurück in Richtung IIx.
+        </li>
+        <li>
+          <strong>Kaum veränderbar:</strong> der Wechsel zwischen Typ I und Typ II. Eine echte Umwandlung
+          ist beim Menschen nur in sehr geringem Umfang und unter extremen Bedingungen nachweisbar. Dein
+          grundsätzliches Fasertypverhältnis ist stark genetisch geprägt.
+        </li>
+        <li>
+          <strong>Immer individuell:</strong> Im Durchschnitt liegt das Verhältnis bei etwa 50:50, die
+          Streuung ist aber groß. Einzelne Muskeln weichen deutlich ab — der tiefe Wadenmuskel
+          (M. soleus) als Haltemuskel besteht überwiegend aus Typ-I-Fasern.
+        </li>
+      </ul>
+      <div class="note">
+        <p class="note__title">Randnotiz: Hybridfasern</p>
+        <p>
+          Die scharfe Dreiteilung ist eine Vereinfachung. Viele Fasern tragen gleichzeitig mehrere
+          Myosin-Isoformen (z. B. I/IIa oder IIa/IIx) — man nennt sie Hybridfasern. Sie sind der sichtbare
+          Beleg dafür, dass Fasertypen ein <em>Spektrum</em> bilden und sich langsam entlang dieses
+          Spektrums verschieben.
+        </p>
+      </div>
+
+      <h3>Alter, Inaktivität und warum Krafttraining schützt</h3>
+      <p>
+        Mit den Jahren verliert der Körper Muskelmasse (<span class="term">Sarkopenie</span>) — aber nicht
+        gleichmäßig: Betroffen sind vor allem die <strong>Typ-II-Fasern</strong>. Sie werden dünner, und
+        ganze große motorische Einheiten gehen verloren. Genau diese Fasern brauchst du aber, um dich
+        abzufangen, wenn du stolperst. Deshalb ist Krafttraining mit ausreichender Intensität im Alter
+        keine Kür, sondern Sturzprophylaxe. Dasselbe Muster gilt bei längerer Bettruhe oder
+        Ruhigstellung im Gips.
+      </p>
+      <div class="key">
+        <span class="key__icon">🔑</span>
+        <p>Typ I = Ausdauer-Motor, Typ IIx = Sprinter-Motor, Typ IIa = trainierbarer Mittelweg. Training verschiebt vor allem innerhalb der Typ-II-Familie.</p>
+      </div>
+
+      <div class="quiz" data-quiz="4"></div>
+      <div class="done-row">
+        <button class="btn done-btn" data-done="4" type="button">Modul als erledigt markieren</button>
+      </div>
+    </section>
+
+    <!-- ============================ MODUL 5 ============================ -->
+    <section class="module" id="modul-5" data-module="5">
+      <div class="module__head">
+        <span class="module__num">Modul 5</span>
+        <span class="module__time">· ca. 35 Min.</span>
+        <h2>Rezeptoren: Wie der Körper misst, was er tut</h2>
+      </div>
+
+      <div class="goals">
+        <p class="goals__title">Lernziele</p>
+        <ul>
+          <li>Du kannst erklären, was Propriozeption ist und aus welchen Teilleistungen sie besteht.</li>
+          <li>Du kannst Muskelspindel und Golgi-Sehnenorgan nach Lage, Messgröße und Nervenfaser unterscheiden.</li>
+          <li>Du weißt, wozu das γ-Motoneuron gut ist.</li>
+          <li>Du kennst die weiteren Rezeptoren in Gelenk und Haut und ihren Beitrag zum Gleichgewicht.</li>
+        </ul>
+      </div>
+
+      <h3>Propriozeption — der Sinn, den kaum jemand aufzählt</h3>
+      <p>
+        Schließ die Augen und hebe einen Arm. Du weißt genau, wo er ist, wie schnell er sich bewegt und
+        wie viel Kraft du einsetzt — ohne hinzusehen. Diese Wahrnehmung des eigenen Körpers heißt
+        <span class="term">Propriozeption</span> (Tiefensensibilität). Sie besteht aus drei Leistungen:
+      </p>
+      <div class="cards">
+        <div class="card">
+          <h4>Stellungssinn</h4>
+          <p>Wo befinden sich meine Gelenke gerade? (statisch)</p>
+        </div>
+        <div class="card">
+          <h4>Bewegungssinn</h4>
+          <p>In welche Richtung und wie schnell bewege ich mich? (dynamisch)</p>
+        </div>
+        <div class="card">
+          <h4>Kraftsinn</h4>
+          <p>Wie viel Spannung setze ich gerade ein?</p>
+        </div>
+      </div>
+      <p>
+        Geliefert werden diese Informationen von <span class="term">Propriozeptoren</span> — spezialisierten
+        Sensoren in Muskeln, Sehnen, Gelenkkapseln und Bändern. Die zwei wichtigsten sitzen im Muskel selbst.
+      </p>
+
+      <figure class="figure">
+        <svg viewBox="0 0 720 348" role="img" aria-label="Schema: Muskelspindel parallel im Muskelbauch, Golgi-Sehnenorgan in Serie in der Sehne, mit sensorischen und motorischen Nervenbahnen zum Rückenmark">
+          <defs>
+            <marker id="arA" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="var(--nerve)"/></marker>
+            <marker id="arE" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="var(--muscle)"/></marker>
+          </defs>
+
+          <!-- Rückenmark -->
+          <rect x="58" y="100" width="94" height="150" rx="24" fill="var(--surface-2)" stroke="var(--line)"/>
+          <path d="M86 132c14-8 26 6 19 18 7 12-5 26-19 18-10-6-10-30 0-36z" fill="var(--nerve)" fill-opacity="0.16" stroke="var(--nerve)" stroke-width="1.2"/>
+          <path d="M124 132c-14-8-26 6-19 18-7 12 5 26 19 18 10-6 10-30 0-36z" fill="var(--nerve)" fill-opacity="0.16" stroke="var(--nerve)" stroke-width="1.2"/>
+          <text class="svg-label" x="105" y="272" text-anchor="middle">Rückenmark</text>
+
+          <!-- Muskelbauch -->
+          <path d="M296 186 C 320 122, 540 122, 580 186 C 540 250, 320 250, 296 186 Z" fill="var(--muscle)" fill-opacity="0.14" stroke="var(--muscle)" stroke-width="1.6"/>
+          <g stroke="var(--muscle)" stroke-width="1" stroke-opacity="0.4">
+            <path d="M320 160h240M320 172h240M320 200h240M320 212h240"/>
+          </g>
+
+          <!-- Muskelspindel (parallel) -->
+          <ellipse cx="440" cy="186" rx="52" ry="15" fill="var(--surface)" stroke="var(--nerve)" stroke-width="1.8"/>
+          <g stroke="var(--nerve)" stroke-width="1.3" fill="none">
+            <path d="M392 182c14 0 14-6 28-6s14 6 28 6 14-6 28-6"/>
+            <path d="M392 191c14 0 14 6 28 6s14-6 28-6 14 6 28 6"/>
+          </g>
+          <text class="svg-label" x="440" y="274" text-anchor="middle">Muskelspindel</text>
+          <text class="svg-label--sm" x="440" y="288" text-anchor="middle">parallel zu den Muskelfasern · misst Länge</text>
+
+          <!-- Sehne + Golgi-Sehnenorgan -->
+          <path d="M580 168 L648 176 L648 196 L580 204 Z" fill="var(--energy)" fill-opacity="0.18" stroke="var(--energy)" stroke-width="1.4"/>
+          <g stroke="var(--energy)" stroke-width="1.2" fill="none">
+            <path d="M584 172c12 6 24 0 36 6s24 0 26 4M584 200c12-6 24 0 36-6s24 0 26-4"/>
+          </g>
+          <ellipse cx="606" cy="186" rx="20" ry="14" fill="none" stroke="var(--nerve)" stroke-width="1.8"/>
+          <text class="svg-label" x="606" y="112" text-anchor="middle">Golgi-Sehnenorgan</text>
+          <text class="svg-label--sm" x="606" y="126" text-anchor="middle">in Serie · misst Spannung</text>
+
+          <!-- Knochen -->
+          <rect x="648" y="146" width="30" height="80" rx="12" fill="var(--muted)" fill-opacity="0.25" stroke="var(--muted)" stroke-width="1"/>
+          <text class="svg-label--sm" x="663" y="240" text-anchor="middle">Knochen</text>
+
+          <!-- Nervenbahnen -->
+          <path d="M428 170 C 380 96, 250 74, 156 112" fill="none" stroke="var(--nerve)" stroke-width="1.8" marker-end="url(#arA)"/>
+          <text class="svg-label--sm" x="300" y="82" text-anchor="middle">Ia + II · sensorisch (Länge, Geschwindigkeit)</text>
+
+          <path d="M154 150 C 250 138, 330 142, 388 168" fill="none" stroke="var(--muscle)" stroke-width="1.8" stroke-dasharray="5 3" marker-end="url(#arE)"/>
+          <text class="svg-label--sm" x="266" y="134" text-anchor="middle">γ-Motoneuron</text>
+
+          <path d="M154 196 C 214 202, 250 200, 296 194" fill="none" stroke="var(--muscle)" stroke-width="2.2" marker-end="url(#arE)"/>
+          <text class="svg-label--sm" x="228" y="222" text-anchor="middle">α-Motoneuron · motorisch</text>
+
+          <path d="M600 206 C 524 348, 300 348, 158 250" fill="none" stroke="var(--nerve)" stroke-width="1.8" marker-end="url(#arA)"/>
+          <text class="svg-label--sm" x="330" y="340" text-anchor="middle">Ib · sensorisch (Spannung)</text>
+        </svg>
+        <figcaption>
+          <strong>Abb. 4 — Die beiden Muskelsensoren.</strong> Entscheidend ist die Schaltung: Die
+          Muskelspindel liegt <em>parallel</em> zu den Arbeitsfasern — sie wird gedehnt, wenn der Muskel
+          länger wird. Das Golgi-Sehnenorgan liegt <em>in Serie</em> zwischen Muskel und Knochen — durch
+          es läuft die gesamte Kraft, egal ob der Muskel dabei kürzer, länger oder gleich lang wird.
+          Türkis = sensorische (afferente) Bahnen zum Rückenmark, Rot = motorische (efferente) Bahnen zurück.
+        </figcaption>
+      </figure>
+
+      <h3>Die Muskelspindel — Längenmesser</h3>
+      <p>
+        Eine Muskelspindel ist eine wenige Millimeter lange, bindegewebige Kapsel, in der einige besonders
+        dünne Fasern liegen: die <span class="term">intrafusalen Fasern</span> (<span class="lat">fusus</span>
+        = Spindel). Die gewöhnlichen Arbeitsfasern heißen im Gegensatz dazu
+        <span class="term">extrafusale Fasern</span>. Die Spindel ist mit ihren Enden im Bindegewebe
+        verankert und liegt parallel zu den Arbeitsfasern — <strong>wird der Muskel gedehnt, wird auch die
+        Spindel gedehnt.</strong>
+      </p>
+      <ul>
+        <li><strong>Ia-Afferenz</strong> (schnell leitend, ringförmig um die Fasermitte gewickelt): meldet vor allem die <em>Geschwindigkeit</em> der Dehnung, dazu die aktuelle Länge. Sie reagiert also besonders auf plötzliche Längenänderungen.</li>
+        <li><strong>Typ-II-Afferenz:</strong> meldet die <em>statische Länge</em> — wie weit ist der Muskel gerade gedehnt.</li>
+      </ul>
+
+      <h4>Wozu das γ-Motoneuron?</h4>
+      <p>
+        Ein Problem: Verkürzt sich der Muskel, würde die parallel liegende Spindel schlaff — sie könnte
+        nichts mehr messen, genau wie ein durchhängendes Maßband. Deshalb gibt es neben den α-Motoneuronen
+        (für die Arbeitsfasern) die kleineren <span class="term">γ-Motoneurone</span>, die die
+        <em>Enden</em> der intrafusalen Fasern anspannen. Beide werden gemeinsam angesteuert
+        (<span class="term">α-γ-Koaktivierung</span>): Der Muskel verkürzt sich, die Spindel wird
+        „nachgespannt“ und bleibt über den ganzen Bewegungsbereich empfindlich.
+      </p>
+      <div class="note note--nerve">
+        <p class="note__title">Bild dazu</p>
+        <p>
+          Stell dir die Spindel als Messschnur neben einem Seil vor. Zieht sich das Seil zusammen, würde die
+          Schnur durchhängen — also kürzt eine kleine Winde (γ-Motoneuron) die Schnur passend mit. So bleibt
+          die Messung jederzeit gültig.
+        </p>
+      </div>
+      <p>
+        Die Spindeldichte ist nicht überall gleich: In fein gesteuerten Muskeln (Nacken, Hand, Augen) sitzen
+        besonders viele Spindeln, in groben Muskeln deutlich weniger. Wo präzise gesteuert wird, wird auch
+        präzise gemessen.
+      </p>
+
+      <h3>Das Golgi-Sehnenorgan — Kraftmesser</h3>
+      <p>
+        Am Übergang von Muskel zu Sehne liegen zwischen die Kollagenbündel eingeflochtene Nervenendigungen:
+        das <span class="term">Golgi-Sehnenorgan</span> (GSO). Weil es <strong>in Serie</strong> geschaltet
+        ist, spürt es die tatsächlich übertragene <span class="term">Spannung</span> — die Kraft. Seine
+        <span class="term">Ib-Afferenz</span> meldet diese ans Rückenmark.
+      </p>
+      <p>
+        Das GSO ist erstaunlich fein: Es antwortet schon auf die Kontraktion einzelner motorischer Einheiten,
+        deren Sehnenfasern durch „sein“ Organ laufen. Damit ist es weniger ein Notfallsensor als vielmehr
+        eine <strong>ständige Kraftrückmeldung</strong>, mit der das Nervensystem die Spannung dosiert und
+        die Last innerhalb des Muskels verteilt.
+      </p>
+      <div class="note note--muscle">
+        <p class="note__title">Verbreiteter Irrtum</p>
+        <p>
+          Man liest oft, das Golgi-Sehnenorgan sei eine „Notbremse“, die bei Überlastung den Muskel abschaltet
+          und so Sehnenrisse verhindert. Diese Sicht gilt heute als überholt und zu grob: Das GSO arbeitet
+          über den gesamten Kraftbereich als feiner Regler mit. Gegen einen echten Riss schützt es nicht
+          zuverlässig — sonst gäbe es keine Sehnenrisse.
+        </p>
+      </div>
+
+      <div class="table-wrap">
+        <table>
+          <thead><tr><th></th><th>Muskelspindel</th><th>Golgi-Sehnenorgan</th></tr></thead>
+          <tbody>
+            <tr><td>Lage</td><td>im Muskelbauch, <strong>parallel</strong></td><td>am Muskel-Sehnen-Übergang, <strong>in Serie</strong></td></tr>
+            <tr><td>Misst</td><td>Länge und Dehnungsgeschwindigkeit</td><td>Spannung (Kraft)</td></tr>
+            <tr><td>Nervenfaser</td><td>Ia (dynamisch) und II (statisch)</td><td>Ib</td></tr>
+            <tr><td>Eigene Motorik</td><td>ja: γ-Motoneurone</td><td>nein</td></tr>
+            <tr><td>Reflexwirkung auf den eigenen Muskel</td><td>erregend (Dehnungsreflex)</td><td>hemmend (autogene Hemmung)</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="key">
+        <span class="key__icon">🔑</span>
+        <p>Spindel = „Wie lang bin ich und wie schnell werde ich länger?“ · Golgi = „Wie stark ziehe ich gerade?“</p>
+      </div>
+
+      <h3>Die weiteren Rezeptoren</h3>
+      <p>
+        Propriozeption ist Teamarbeit. Rund um jedes Gelenk und in der Haut sitzen weitere Sensoren:
+      </p>
+      <div class="table-wrap">
+        <table>
+          <thead><tr><th>Rezeptor</th><th>Wo</th><th>Meldet</th><th>Adaptation</th></tr></thead>
+          <tbody>
+            <tr><td>Ruffini-Körperchen</td><td>Gelenkkapsel, Haut</td><td>Gelenkstellung, Dehnung, Druckrichtung</td><td>langsam (Dauerreiz)</td></tr>
+            <tr><td>Vater-Pacini-Körperchen</td><td>Gelenkkapsel, Haut, Sehnen</td><td>Beschleunigung, Vibration, schnelle Änderung</td><td>sehr schnell</td></tr>
+            <tr><td>Golgi-artige Endigungen</td><td>Bänder</td><td>Zug am Band, Endstellungen</td><td>langsam</td></tr>
+            <tr><td>Freie Nervenendigungen</td><td>überall im Gewebe</td><td>Schmerz (Nozizeption), Temperatur, chemische Reize, Entzündung</td><td>langsam, sensibilisierbar</td></tr>
+            <tr><td>Merkel-Zellen</td><td>Haut</td><td>anhaltender Druck, Kanten, Textur</td><td>langsam</td></tr>
+            <tr><td>Meissner-Körperchen</td><td>Haut (Handfläche, Fußsohle)</td><td>leichte Berührung, Abrutschen eines Objekts</td><td>schnell</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p>
+        Zusammen mit dem <span class="term">Gleichgewichtsorgan</span> im Innenohr und den Augen ergeben
+        diese Meldungen das Bild, aus dem das Gehirn Haltung und Bewegung steuert. Fällt ein Kanal aus,
+        übernehmen die anderen — bis zu einem gewissen Grad.
+      </p>
+      <div class="note">
+        <p class="note__title">Selbstversuch (30 Sekunden)</p>
+        <p>
+          Stell dich sicher auf ein Bein und zähle bis zehn. Dann schließe die Augen. Das deutliche Wanken
+          zeigt, wie viel Anteil das Sehen am Gleichgewicht hat — und wie sehr jetzt Propriozeption und
+          Innenohr allein arbeiten müssen. Genau darauf beruht klassisches Gleichgewichtstraining nach
+          Verletzungen: Man nimmt Informationskanäle weg oder macht den Untergrund instabil, damit das
+          System die verbleibenden besser nutzen lernt.
+        </p>
+      </div>
+
+      <div class="quiz" data-quiz="5"></div>
+      <div class="done-row">
+        <button class="btn done-btn" data-done="5" type="button">Modul als erledigt markieren</button>
+      </div>
+    </section>
+
+    <!-- ============================ MODUL 6 ============================ -->
+    <section class="module" id="modul-6" data-module="6">
+      <div class="module__head">
+        <span class="module__num">Modul 6</span>
+        <span class="module__time">· ca. 25 Min.</span>
+        <h2>Reflexe: Rezeptoren im Zusammenspiel</h2>
+      </div>
+
+      <div class="goals">
+        <p class="goals__title">Lernziele</p>
+        <ul>
+          <li>Du kannst die fünf Teile eines Reflexbogens benennen.</li>
+          <li>Du kannst Eigenreflex und Fremdreflex unterscheiden.</li>
+          <li>Du kannst Dehnungsreflex, reziproke Hemmung und autogene Hemmung erklären.</li>
+          <li>Du weißt, was der Muskeltonus ist und wie er zustande kommt.</li>
+        </ul>
+      </div>
+
+      <h3>Der Reflexbogen</h3>
+      <p>
+        Ein <span class="term">Reflex</span> ist eine unwillkürliche, immer gleich ablaufende Antwort auf
+        einen bestimmten Reiz. Er läuft über eine feste Kette aus fünf Gliedern — den
+        <span class="term">Reflexbogen</span>:
+      </p>
+      <ol class="steps">
+        <li><div><strong>Rezeptor</strong> — nimmt den Reiz auf (z. B. Muskelspindel).</div></li>
+        <li><div><strong>Afferenter Schenkel</strong> — sensible Nervenfaser zum Rückenmark (z. B. Ia).</div></li>
+        <li><div><strong>Zentrum</strong> — Verschaltung im Rückenmark (oder Hirnstamm).</div></li>
+        <li><div><strong>Efferenter Schenkel</strong> — motorische Nervenfaser zurück (α-Motoneuron).</div></li>
+        <li><div><strong>Effektor</strong> — der Muskel, der antwortet.</div></li>
+      </ol>
+      <p>
+        Weil der Weg nicht übers Gehirn führt, ist er schnell: Beim Kniesehnenreflex vergehen zwischen
+        Schlag und Zuckung nur rund 20–40 Millisekunden. Das Gehirn <em>erfährt</em> davon, aber es
+        <em>entscheidet</em> nicht mit.
+      </p>
+
+      <div class="cards">
+        <div class="card card--muscle">
+          <h4>Eigenreflex (monosynaptisch)</h4>
+          <p>
+            Rezeptor und Effektor liegen im <strong>selben</strong> Organ; nur eine Synapse im Rückenmark.
+            Sehr kurze Latenz, kaum ermüdbar. Beispiel: Patellarsehnenreflex.
+          </p>
+        </div>
+        <div class="card">
+          <h4>Fremdreflex (polysynaptisch)</h4>
+          <p>
+            Rezeptor und Effektor liegen in <strong>verschiedenen</strong> Organen; mehrere
+            Zwischenneurone. Längere Latenz, ermüdbar, oft mit Mitreaktion anderer Muskeln.
+            Beispiel: Rückziehreflex nach Schmerzreiz.
+          </p>
+        </div>
+      </div>
+
+      <h3>Die drei Grundschaltungen</h3>
+
+      <figure class="figure">
+        <svg viewBox="0 0 720 330" role="img" aria-label="Schaltbilder von Dehnungsreflex mit reziproker Hemmung und autogener Hemmung über das Golgi-Sehnenorgan">
+          <defs>
+            <marker id="agy" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="var(--muted)"/></marker>
+            <marker id="agn" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="var(--ok)"/></marker>
+            <marker id="arn" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="var(--bad)"/></marker>
+          </defs>
+
+          <text class="svg-label svg-label--lead" x="10" y="22">1 · Dehnungsreflex und reziproke Hemmung</text>
+
+          <rect x="10" y="40" width="150" height="52" rx="9" fill="var(--surface)" stroke="var(--line)"/>
+          <text class="svg-label" x="85" y="62" text-anchor="middle">Muskel wird</text>
+          <text class="svg-label" x="85" y="78" text-anchor="middle">plötzlich gedehnt</text>
+
+          <rect x="196" y="40" width="140" height="52" rx="9" fill="var(--surface)" stroke="var(--nerve)" stroke-width="1.6"/>
+          <text class="svg-label" x="266" y="62" text-anchor="middle">Muskelspindel</text>
+          <text class="svg-label--sm" x="266" y="78" text-anchor="middle">Ia-Afferenz feuert</text>
+
+          <rect x="372" y="8" width="160" height="48" rx="9" fill="var(--surface)" stroke="var(--line)"/>
+          <text class="svg-label" x="452" y="28" text-anchor="middle">α-Motoneuron</text>
+          <text class="svg-label--sm" x="452" y="44" text-anchor="middle">direkt erregt · 1 Synapse</text>
+
+          <rect x="568" y="8" width="142" height="48" rx="9" fill="var(--surface)" stroke="var(--ok)" stroke-width="1.6"/>
+          <text class="svg-label" x="639" y="28" text-anchor="middle">Agonist</text>
+          <text class="svg-label--sm" x="639" y="44" text-anchor="middle">kontrahiert</text>
+
+          <rect x="372" y="76" width="160" height="48" rx="9" fill="var(--surface)" stroke="var(--line)"/>
+          <text class="svg-label" x="452" y="96" text-anchor="middle">Ia-Interneuron</text>
+          <text class="svg-label--sm" x="452" y="112" text-anchor="middle">hemmend</text>
+
+          <rect x="568" y="76" width="142" height="48" rx="9" fill="var(--surface)" stroke="var(--bad)" stroke-width="1.6"/>
+          <text class="svg-label" x="639" y="96" text-anchor="middle">Antagonist</text>
+          <text class="svg-label--sm" x="639" y="112" text-anchor="middle">wird gehemmt</text>
+
+          <g fill="none" stroke="var(--muted)" stroke-width="1.5">
+            <path d="M160 66h26" marker-end="url(#agy)"/>
+            <path d="M336 66h18"/>
+            <path d="M354 32v68"/>
+            <path d="M354 32h12" marker-end="url(#agy)"/>
+            <path d="M354 100h12" marker-end="url(#agy)"/>
+          </g>
+          <text class="svg-label--sm" x="350" y="58" text-anchor="end">Ia</text>
+          <path d="M532 32h30" fill="none" stroke="var(--ok)" stroke-width="1.8" marker-end="url(#agn)"/>
+          <text class="svg-label--sm" x="547" y="24" text-anchor="middle">+</text>
+          <path d="M532 100h30" fill="none" stroke="var(--bad)" stroke-width="1.8" marker-end="url(#arn)"/>
+          <text class="svg-label--sm" x="547" y="92" text-anchor="middle">−</text>
+
+          <path d="M10 148h700" stroke="var(--line)" stroke-width="1"/>
+          <text class="svg-label svg-label--lead" x="10" y="170">2 · Autogene Hemmung über das Golgi-Sehnenorgan</text>
+
+          <rect x="10" y="196" width="150" height="52" rx="9" fill="var(--surface)" stroke="var(--line)"/>
+          <text class="svg-label" x="85" y="218" text-anchor="middle">Muskelspannung</text>
+          <text class="svg-label" x="85" y="234" text-anchor="middle">steigt an</text>
+
+          <rect x="196" y="196" width="140" height="52" rx="9" fill="var(--surface)" stroke="var(--nerve)" stroke-width="1.6"/>
+          <text class="svg-label" x="266" y="218" text-anchor="middle">Golgi-Sehnenorgan</text>
+          <text class="svg-label--sm" x="266" y="234" text-anchor="middle">Ib-Afferenz feuert</text>
+
+          <rect x="372" y="182" width="160" height="44" rx="9" fill="var(--surface)" stroke="var(--line)"/>
+          <text class="svg-label" x="452" y="200" text-anchor="middle">Ib-Interneuron</text>
+          <text class="svg-label--sm" x="452" y="216" text-anchor="middle">hemmend</text>
+
+          <rect x="568" y="182" width="142" height="44" rx="9" fill="var(--surface)" stroke="var(--bad)" stroke-width="1.6"/>
+          <text class="svg-label" x="639" y="200" text-anchor="middle">eigener Muskel</text>
+          <text class="svg-label--sm" x="639" y="216" text-anchor="middle">wird gedämpft</text>
+
+          <rect x="372" y="246" width="160" height="44" rx="9" fill="var(--surface)" stroke="var(--line)"/>
+          <text class="svg-label" x="452" y="264" text-anchor="middle">erregendes</text>
+          <text class="svg-label--sm" x="452" y="280" text-anchor="middle">Interneuron</text>
+
+          <rect x="568" y="246" width="142" height="44" rx="9" fill="var(--surface)" stroke="var(--ok)" stroke-width="1.6"/>
+          <text class="svg-label" x="639" y="264" text-anchor="middle">Antagonist</text>
+          <text class="svg-label--sm" x="639" y="280" text-anchor="middle">wird aktiviert</text>
+
+          <g fill="none" stroke="var(--muted)" stroke-width="1.5">
+            <path d="M160 222h26" marker-end="url(#agy)"/>
+            <path d="M336 222h18"/>
+            <path d="M354 204v64"/>
+            <path d="M354 204h12" marker-end="url(#agy)"/>
+            <path d="M354 268h12" marker-end="url(#agy)"/>
+          </g>
+          <text class="svg-label--sm" x="350" y="214" text-anchor="end">Ib</text>
+          <path d="M532 204h30" fill="none" stroke="var(--bad)" stroke-width="1.8" marker-end="url(#arn)"/>
+          <text class="svg-label--sm" x="547" y="196" text-anchor="middle">−</text>
+          <path d="M532 268h30" fill="none" stroke="var(--ok)" stroke-width="1.8" marker-end="url(#agn)"/>
+          <text class="svg-label--sm" x="547" y="260" text-anchor="middle">+</text>
+
+          <text class="svg-label--sm" x="10" y="318">+ = erregend · − = hemmend</text>
+        </svg>
+        <figcaption>
+          <strong>Abb. 5 — Die Grundschaltungen im Rückenmark.</strong> Oben: Die gedehnte Spindel erregt
+          über eine einzige Synapse „ihr“ α-Motoneuron (Dehnungsreflex) und hemmt gleichzeitig über ein
+          Zwischenneuron den Gegenspieler (reziproke Hemmung) — sonst würde der Antagonist die Antwort
+          blockieren. Unten: Steigende Spannung dämpft über das Ib-Interneuron den eigenen Muskel und
+          aktiviert den Gegenspieler — die Wirkung ist also genau spiegelbildlich zur Spindel.
+        </figcaption>
+      </figure>
+
+      <h4>1. Dehnungsreflex (Muskeleigenreflex)</h4>
+      <p>
+        Wird ein Muskel plötzlich gedehnt, feuert die Muskelspindel, und der Muskel spannt reflektorisch
+        an. Sinn: Der Körper hält eine Länge stabil und fängt unerwartete Störungen ab, bevor das Gehirn
+        überhaupt reagieren könnte — etwa wenn du auf einem unebenen Boden umknickst.
+        Der bekannte <span class="term">Patellarsehnenreflex</span> ist genau das: Der Schlag aufs Band
+        dehnt kurz den Oberschenkelstrecker, die Spindel meldet, das Bein zuckt nach vorn. In der
+        neurologischen Untersuchung prüft dieser Test den kompletten Reflexbogen inklusive der
+        beteiligten Rückenmarksegmente.
+      </p>
+
+      <h4>2. Reziproke Hemmung</h4>
+      <p>
+        Dieselbe Ia-Faser, die den Agonisten erregt, hemmt über ein Zwischenneuron das Motoneuron des
+        <strong>Antagonisten</strong>. Nur dadurch kann eine Bewegung überhaupt zügig ablaufen: Beugt sich
+        der Arm, muss der Strecker loslassen. Dieses Prinzip steckt in jeder flüssigen Bewegung.
+      </p>
+
+      <h4>3. Autogene Hemmung</h4>
+      <p>
+        Steigt die Spannung, hemmt das Golgi-Sehnenorgan über sein Ib-Interneuron den
+        <strong>eigenen</strong> Muskel und aktiviert den Gegenspieler. Muskelspindel und GSO wirken damit
+        gegenläufig — zusammen bilden sie einen Regelkreis, der Länge und Spannung in einem passenden
+        Bereich hält.
+      </p>
+
+      <h3>Muskeltonus — Spannung ohne Absicht</h3>
+      <p>
+        Auch ein „entspannter“ Muskel ist nicht völlig schlaff: Er hat eine Grundspannung, den
+        <span class="term">Muskeltonus</span>. Sie entsteht teils passiv aus der Elastizität von Muskel und
+        Bindegewebe, teils aktiv über die Dauerschleife aus Muskelspindel, Ia-Afferenz und γ-Motoneuron.
+        Wie stark diese Schleife eingestellt ist, regeln übergeordnete Zentren im Gehirn — deshalb ändert
+        sich der Tonus mit Anspannung, Müdigkeit, Kälte oder Angst.
+      </p>
+      <div class="note note--nerve">
+        <p class="note__title">Klinischer Bezug</p>
+        <p>
+          Fällt die dämpfende Kontrolle aus dem Gehirn weg (z. B. nach einem Schlaganfall), können
+          Eigenreflexe übersteigert und der Tonus erhöht sein — die <span class="lat">Spastik</span>.
+          Ist dagegen der Reflexbogen selbst unterbrochen (etwa bei einer Nervenwurzelschädigung), fällt
+          der Reflex schwach aus oder ganz weg. Deshalb prüfen Ärztinnen und Ärzte Reflexe: Sie sind ein
+          direkter Funktionstest einer klar umrissenen Nervenstrecke.
+        </p>
+      </div>
+
+      <div class="quiz" data-quiz="6"></div>
+      <div class="done-row">
+        <button class="btn done-btn" data-done="6" type="button">Modul als erledigt markieren</button>
+      </div>
+    </section>
+
+    <!-- ============================ MODUL 7 ============================ -->
+    <section class="module" id="modul-7" data-module="7">
+      <div class="module__head">
+        <span class="module__num">Modul 7</span>
+        <span class="module__time">· ca. 25 Min.</span>
+        <h2>Vom Wissen zur Praxis</h2>
+      </div>
+
+      <div class="goals">
+        <p class="goals__title">Lernziele</p>
+        <ul>
+          <li>Du kannst die Dehnmethoden unterscheiden und einordnen, was sie bewirken.</li>
+          <li>Du verstehst den Dehnungs-Verkürzungs-Zyklus.</li>
+          <li>Du kannst erklären, warum Anfänger schnell stärker werden, ohne dicker zu sein.</li>
+          <li>Du weißt, wodurch Muskelkater entsteht — und wodurch nicht.</li>
+        </ul>
+      </div>
+
+      <h3>Dehnen — was dabei wirklich passiert</h3>
+      <div class="table-wrap">
+        <table>
+          <thead><tr><th>Methode</th><th>Ablauf</th><th>Typischer Einsatz</th></tr></thead>
+          <tbody>
+            <tr><td>Statisch</td><td>Position langsam einnehmen und 20–60 s halten</td><td>Nach der Belastung, eigenständige Beweglichkeitseinheit</td></tr>
+            <tr><td>Dynamisch</td><td>Kontrollierte, zunehmend große Bewegungen durch den Bewegungsbereich</td><td>Aufwärmen vor Sport</td></tr>
+            <tr><td>PNF / Anspannen-Entspannen</td><td>Muskel in Dehnstellung ca. 5–10 s isometrisch anspannen, lösen, weiter dehnen</td><td>Beweglichkeit gezielt erweitern, oft mit Partner</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p>
+        Als Erklärung für die Anspannen-Entspannen-Technik wird gern die autogene Hemmung des
+        Golgi-Sehnenorgans genannt. Die reflektorische Hemmung ist allerdings kurz — sie überdauert die
+        Anspannung kaum. Nach heutigem Stand beruht der Zugewinn beim Dehnen vor allem auf einer
+        gestiegenen <span class="term">Dehnungstoleranz</span>: Man erträgt mehr Dehnung, bevor der Reiz
+        als unangenehm empfunden wird. Dazu kommen viskoelastische Effekte, die kurzfristig wirken, und
+        bei sehr langem, konsequentem Training auch strukturelle Anpassungen.
+      </p>
+      <div class="note note--muscle">
+        <p class="note__title">Praxishinweis</p>
+        <p>
+          Sehr langes statisches Dehnen (deutlich über eine Minute pro Muskel) unmittelbar vor einer
+          Schnellkraft- oder Maximalkraftleistung kann diese kurzfristig leicht mindern. Kurze
+          Dehnpositionen sind unkritisch. Zum Aufwärmen ist dynamisches Dehnen mit steigender Intensität
+          die naheliegendere Wahl; statisches Dehnen passt gut in eine eigene Einheit oder ans Ende des
+          Trainings.
+        </p>
+      </div>
+
+      <h3>Der Dehnungs-Verkürzungs-Zyklus</h3>
+      <p>
+        Springst du aus dem Stand, gehst du zuerst kurz in die Knie. Diese Vordehnung ist kein Zufall —
+        sie macht den Sprung messbar höher. Drei Dinge greifen ineinander:
+      </p>
+      <ol class="steps">
+        <li><div><strong>Elastische Energie:</strong> Sehnen und Bindegewebe werden beim Abbremsen gespannt und geben die Energie beim Abdrücken zurück — wie ein Gummiband.</div></li>
+        <li><div><strong>Dehnungsreflex:</strong> Die schnelle Dehnung reizt die Muskelspindel, die zusätzliche Aktivierung schaltet dazu.</div></li>
+        <li><div><strong>Vorspannung:</strong> Der Muskel ist beim Umkehrpunkt bereits aktiv, statt erst Kraft aufbauen zu müssen.</div></li>
+      </ol>
+      <p>
+        Entscheidend ist die <strong>Kürze</strong> der Umkehr: Bleibt man unten stehen, verpufft die
+        elastische Energie und der Reflex verhallt. Genau hier setzt plyometrisches Training an
+        (Sprünge, Hops, Sprungläufe) — es trainiert kurze Bodenkontaktzeiten und die Steifigkeit des
+        Muskel-Sehnen-Systems.
+      </p>
+
+      <h3>Warum Anfänger so schnell stärker werden</h3>
+      <p>
+        In den ersten Wochen eines Krafttrainings steigt die Kraft deutlich, während der Muskel kaum
+        sichtbar zunimmt. Der Grund ist <strong>neuronal</strong>, nicht muskulär:
+      </p>
+      <ul>
+        <li>Mehr motorische Einheiten werden rekrutiert — auch die großen, schwellenhohen.</li>
+        <li>Die Impulsfrequenz steigt (bessere Frequenzierung).</li>
+        <li>Die Ansteuerung wird synchroner, die Bewegungstechnik ökonomischer.</li>
+        <li>Antagonisten hemmen weniger unnötig gegen (intermuskuläre Koordination).</li>
+      </ul>
+      <p>
+        Erst danach folgt die eigentliche <span class="term">Hypertrophie</span>: Die Fasern lagern mehr
+        Myofibrillen ein und werden dicker, Satellitenzellen steuern zusätzliche Zellkerne bei. Die Zahl
+        der Fasern bleibt dabei weitgehend gleich — Muskeln werden dicker, nicht mehr.
+      </p>
+      <div class="cards">
+        <div class="card card--muscle">
+          <h4>Kraft &amp; Hypertrophie</h4>
+          <p>Ausreichende Last oder Nähe zur Erschöpfung, damit auch Typ-II-Einheiten arbeiten; Wiederholungen im mittleren Bereich, planmäßige Steigerung.</p>
+        </div>
+        <div class="card card--energy">
+          <h4>Ausdauer</h4>
+          <p>Lange, moderate Reize vermehren Mitochondrien, Kapillaren und Enzyme — vor allem in Typ-I-Fasern.</p>
+        </div>
+        <div class="card">
+          <h4>Koordination &amp; Propriozeption</h4>
+          <p>Instabile Untergründe, einbeinige Übungen, Augen zu, Sprung-Landungen: Sie schulen das Zusammenspiel der Rezeptoren — Standard in der Rehabilitation.</p>
+        </div>
+      </div>
+
+      <h3>Muskelkater</h3>
+      <p>
+        Muskelkater entsteht typischerweise nach <strong>ungewohnter exzentrischer Belastung</strong>
+        (bergab laufen, langsames Absenken schwerer Lasten). Ursache sind feinste Schäden an den
+        Z-Scheiben und den umgebenden Strukturen mit nachfolgender Entzündungsreaktion — deshalb der
+        verzögerte Beginn nach etwa 12–24 Stunden und das Maximum nach ein bis drei Tagen. Die alte
+        Erklärung „Übersäuerung durch Laktat“ gilt als widerlegt: Laktat ist längst abgebaut, bevor der
+        Schmerz überhaupt beginnt.
+      </p>
+
+      <h3>Wie es weitergeht</h3>
+      <p>
+        Mit diesem Kurs hast du das Fundament: Struktur (Modul 2), Funktion (Modul 3 &amp; 4) und
+        Steuerung (Modul 5 &amp; 6). Sinnvolle nächste Schritte sind die spezielle Muskellehre
+        (Ursprung, Ansatz und Funktion einzelner Muskeln), die Biomechanik (Hebel, Drehmomente,
+        Gelenkmechanik) und die Trainingslehre (Belastungssteuerung, Periodisierung).
+      </p>
+      <div class="note">
+        <p class="note__title">Wichtiger Hinweis</p>
+        <p>
+          Dieser Kurs vermittelt Grundlagenwissen zu Bildungszwecken. Er ersetzt weder eine medizinische
+          Diagnose noch eine physiotherapeutische oder ärztliche Beratung. Bei Beschwerden, Schmerzen oder
+          nach Verletzungen wende dich bitte an entsprechend ausgebildete Fachpersonen.
+        </p>
+      </div>
+
+      <div class="quiz" data-quiz="7"></div>
+      <div class="done-row">
+        <button class="btn done-btn" data-done="7" type="button">Modul als erledigt markieren</button>
+      </div>
+    </section>
+
+    <!-- ============================ ABSCHLUSSTEST ============================ -->
+    <section class="module" id="abschlusstest">
+      <div class="module__head">
+        <span class="module__num">Abschluss</span>
+        <span class="module__time">· 12 Fragen aus allen Modulen</span>
+        <h2>Abschlusstest</h2>
+      </div>
+      <p>
+        Der Test mischt Fragen aus allen sieben Modulen. Ab <strong>9 von 12</strong> richtigen Antworten
+        hast du die Grundlagen sicher drauf. Falsch beantwortete Fragen zeigen dir, in welches Modul du
+        noch einmal schauen solltest.
+      </p>
+      <div class="quiz" data-quiz="final"></div>
+    </section>
+
+    <!-- ============================ KARTEIKARTEN ============================ -->
+    <section class="module" id="karteikarten">
+      <div class="module__head">
+        <span class="module__num">Üben</span>
+        <span class="module__time">· 24 Karten</span>
+        <h2>Karteikarten</h2>
+      </div>
+      <p>
+        Zum Wiederholen: Karte anklicken (oder Leertaste drücken), um die Antwort zu sehen. Mit den
+        Pfeiltasten blätterst du weiter.
+      </p>
+      <div class="flash">
+        <div class="flash__card" id="flashCard" tabindex="0" role="button" aria-live="polite">
+          <div>
+            <p class="flash__side" id="flashSide">Frage</p>
+            <p class="flash__text" id="flashText">Karten werden geladen …</p>
+            <p class="flash__hint">Klicken zum Umdrehen</p>
+          </div>
+        </div>
+        <div class="flash__bar">
+          <button class="btn" id="flashPrev" type="button">← Zurück</button>
+          <span class="flash__count" id="flashCount">1 / 24</span>
+          <button class="btn" id="flashNext" type="button">Weiter →</button>
+          <button class="btn" id="flashShuffle" type="button">Mischen</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================ GLOSSAR ============================ -->
+    <section class="module" id="glossar">
+      <div class="module__head">
+        <span class="module__num">Nachschlagen</span>
+        <h2>Glossar</h2>
+      </div>
+      <label for="glossarySearch" class="goals__title" style="display:block;margin-bottom:.5rem;">Begriff suchen</label>
+      <input class="glossary__search" id="glossarySearch" type="search" placeholder="z. B. Sarkomer, Ia, Hypertrophie …" autocomplete="off" />
+      <div class="glossary__list" id="glossaryList"></div>
+    </section>
+
+    <!-- ============================ QUELLEN ============================ -->
+    <section class="module" id="quellen">
+      <div class="module__head">
+        <span class="module__num">Anhang</span>
+        <h2>Quellen, Genauigkeit &amp; Hinweise</h2>
+      </div>
+      <h3>Worauf die Inhalte beruhen</h3>
+      <p>
+        Der Kurs gibt den etablierten Lehrbuchstand der Anatomie, Muskelphysiologie und Bewegungslehre
+        wieder, wie er in Standardwerken der Physiologie (z. B. Silbernagl/Despopoulos, Schmidt/Lang,
+        Guyton &amp; Hall), der Anatomie (z. B. Schünke/Schulte/Schumacher „Prometheus“, Benninghoff)
+        sowie der Sport- und Trainingswissenschaft (z. B. Weineck „Sportbiologie“, McArdle/Katch/Katch)
+        dargestellt wird. Für ein Studium solltest du zusätzlich in das jeweils bei dir eingeführte
+        Lehrbuch schauen — Begriffe und Einteilungen weichen im Detail voneinander ab.
+      </p>
+
+      <h3>Wo dieser Kurs bewusst vereinfacht</h3>
+      <ul>
+        <li>Zahlenangaben (Fasertyp-Anteile, Innervationsverhältnisse, Reflexlatenzen, Sarkomerlängen) sind Größenordnungen, keine exakten Konstanten; sie schwanken zwischen Muskeln, Personen und Messmethoden.</li>
+        <li>Die Einteilung in genau drei Fasertypen ist ein Modell — real bilden Fasern ein Spektrum mit Hybridformen.</li>
+        <li>Reflexschaltungen sind hier auf ihre Kernwege reduziert. Tatsächlich wirken zusätzlich präsynaptische Hemmung, Renshaw-Zellen und absteigende Bahnen aus dem Gehirn mit.</li>
+        <li>An zwei Stellen weicht der Kurs von häufig zu lesenden Vereinfachungen ab, weil diese als überholt gelten: Das Golgi-Sehnenorgan ist kein reiner „Überlastungs-Notschalter“, und der Beweglichkeitsgewinn beim Dehnen erklärt sich nicht überwiegend über Reflexhemmung.</li>
+      </ul>
+
+      <h3>Kein medizinischer Rat</h3>
+      <p>
+        Die Inhalte dienen der Bildung. Sie ersetzen keine Diagnose und keine individuelle Beratung durch
+        Ärztinnen, Ärzte, Physiotherapie oder qualifizierte Trainerinnen und Trainer.
+      </p>
+
+      <h3>Technisches</h3>
+      <p>
+        Die Seite kommt ohne Tracking und ohne externe Skripte aus. Dein Lernfortschritt und deine
+        Quizergebnisse werden ausschließlich lokal im Browser gespeichert
+        (<span class="lat">localStorage</span>) und verlassen dein Gerät nicht. Über „Fortschritt
+        zurücksetzen“ in der Seitenleiste löschst du sie jederzeit.
+      </p>
+    </section>
+
+  </main>
+</div>
+
+<footer class="footer">
+  <div class="footer__inner">
+    <p><strong>Kinesiologie Basiskurs</strong> — Muskel, Muskelfaser und Rezeptoren. Ein freies Lernangebot zu Bildungszwecken.</p>
+    <p>Kein Ersatz für medizinische Beratung. Alle Abbildungen sind schematisch und maßstabsfrei.</p>
+  </div>
+</footer>
+
+<script src="kurs.js"></script>
+</body>
+</html>
