@@ -69,3 +69,10 @@ Dateien gleichen Namens austauschen.
 Texte und Eckdaten basieren auf öffentlich verfügbaren Informationen.
 Die Preise und Gerichte in der Karte sind beispielhaft und sollten vor
 Veröffentlichung mit dem aktuellen Angebot des Cafés abgeglichen werden.
+
+## Weiterer Inhalt im Repository
+
+Unter `kurs/kinesiologie/` liegt ein davon unabhängiger, eigenständiger
+Lernkurs zur Bewegungslehre (Muskel, Muskelfaser und Rezeptoren). Er ist nicht
+mit der Café-Website verlinkt und teilt weder CSS noch JavaScript mit ihr —
+Details in `kurs/kinesiologie/README.md`.
