@@ -1,5 +1,5 @@
 /* ===================================================================
-   EB Cleaning — interactions
+   EB-Hochdruckreinigung — interactions
    =================================================================== */
 (function () {
   "use strict";

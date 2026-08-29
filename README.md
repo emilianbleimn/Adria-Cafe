@@ -1,9 +1,8 @@
-# EB Cleaning — Website
+# EB-Hochdruckreinigung — Website
 
-Eine professionelle, aber entspannte One-Page-Website für **EB Cleaning**
-(Emilian Bleim — Hochdruck Flächen Reinigungsservice) — Reinigung von
-Einfahrten, Terrassen, Gehwegen und allen befestigten Bodenflächen rund
-ums Haus.
+Eine professionelle, aber entspannte One-Page-Website für
+**EB-Hochdruckreinigung** (Emilian Bleim) — Reinigung von Einfahrten,
+Terrassen, Gehwegen und allen befestigten Bodenflächen rund ums Haus.
 
 ## Über den Betrieb
 
@@ -72,7 +71,7 @@ python3 -m http.server 8000
 
 ## Farbkonzept
 
-Direkt aus dem EB Cleaning-Logo übernommen:
+Direkt aus dem Logo übernommen:
 
 - **Blau** `#0081f8` (Wasser, Vertrauen, Professionalität) als Hauptfarbe
 - **Kräftiges Orange** `#fd5e01` als Akzent für Buttons & Call-to-Actions

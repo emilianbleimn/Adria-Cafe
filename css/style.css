@@ -1,10 +1,10 @@
 /* ===================================================================
-   EB Cleaning — Emilian Bleim
+   EB-Hochdruckreinigung — Emilian Bleim
    Identity: Logo-Blau & Logo-Orange, klar und selbstbewusst
    =================================================================== */
 
 :root {
-  /* Logo blues (sampled from the EB Cleaning logo) */
+  /* Logo blues (sampled from the logo artwork) */
   --blue-deep:  #004788;
   --blue:       #0081f8;
   --blue-2:     #0074df;
@@ -12,7 +12,7 @@
   --blue-pale:  #ebf5fe;
   --sky:        #d9ecfe;
 
-  /* Logo orange (sampled from the EB Cleaning logo) */
+  /* Logo orange (sampled from the logo artwork) */
   --sun:        #fd5e01;
   --sun-2:      #cf4d01;
 
