@@ -138,7 +138,7 @@
   /* ---------- Booking calendar ----------
      Belegte Tage hier eintragen (Format "JJJJ-MM-TT"), z. B.:
      var BLOCKED_DATES = ["2026-07-14", "2026-07-15"];
-     Samstag und Sonntag gelten automatisch als geschlossen.       */
+     Sonntag gilt automatisch als geschlossen, Samstag als "auf Anfrage". */
   var BLOCKED_DATES = [];
   var BOOKING_MAX_MONTHS_AHEAD = 3;
 
@@ -178,6 +178,7 @@
 
     var parts = selectedDateStr.split("-");
     var dateLabel = formatSelected(+parts[0], +parts[1] - 1, +parts[2]);
+    var isSaturday = new Date(+parts[0], +parts[1] - 1, +parts[2]).getDay() === 6;
 
     if (!selectedSlot) {
       calSelectedText.classList.remove("has-date");
@@ -186,7 +187,8 @@
     }
 
     calSelectedText.classList.add("has-date");
-    span.textContent = "Ausgewählter Termin: " + dateLabel + ", " + selectedSlot;
+    span.textContent = "Ausgewählter Termin: " + dateLabel + ", " + selectedSlot +
+      (isSaturday ? " (Samstag nur auf Anfrage — ich bestätige, sobald ich Zeit habe)" : "");
   }
 
   if (cfSlot) {
@@ -232,7 +234,8 @@
         var dateObj = new Date(viewYear, viewMonth, day);
         var iso = toISODate(viewYear, viewMonth, day);
         var isPast = dateObj < today;
-        var isWeekend = dateObj.getDay() === 0 || dateObj.getDay() === 6;
+        var isSunday = dateObj.getDay() === 0;
+        var isSaturday = dateObj.getDay() === 6;
         var isBlocked = BLOCKED_DATES.indexOf(iso) !== -1;
         var isToday = dateObj.getTime() === today.getTime();
         var isSelected = iso === selectedDateStr;
@@ -242,12 +245,13 @@
         btn.className = "calendar-day";
         btn.textContent = String(day);
 
-        if (isPast || isWeekend || isBlocked) {
+        if (isPast || isSunday || isBlocked) {
           btn.disabled = true;
-          if (isBlocked && !isPast && !isWeekend) {
+          if (isBlocked && !isPast && !isSunday) {
             btn.classList.add("calendar-day--booked");
           }
         } else {
+          if (isSaturday) btn.classList.add("calendar-day--onrequest");
           btn.addEventListener("click", function () {
             selectedDateStr = this.getAttribute("data-iso");
             if (cfTermin) cfTermin.value = selectedDateStr;

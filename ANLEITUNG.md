@@ -54,8 +54,10 @@ deinem E-Mail-Postfach.
 ## 🗓️ A.2) Belegte Termine im Kalender pflegen
 
 Der Kalender auf der Website zeigt automatisch an, welche Tage frei sind.
-Samstag und Sonntag sind automatisch als „Geschlossen" markiert. Wenn ein
-Termin gebucht ist und nicht mehr frei sein soll:
+Sonntag ist automatisch als „Geschlossen" markiert, Samstag als „Auf
+Anfrage" (anklickbar, aber mit Hinweis, dass der Termin erst bestätigt
+werden muss). Wenn ein Termin gebucht ist — egal ob Wochentag oder
+Samstag — und nicht mehr frei sein soll:
 
 1. Öffne den Editor: 👉 https://github.com/emilianbleimn/Adria-Cafe/edit/claude/eb-hochdruckreinigung-site-jl42wf/js/main.js
 2. Ganz oben findest du die Zeile:

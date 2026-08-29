@@ -642,7 +642,12 @@ body.nav-open .nav-toggle span:nth-child(3) { transform: translateY(-7px) rotate
   cursor: default;
 }
 .calendar-day--empty { visibility: hidden; }
-.calendar-day--selected { background: var(--sun); color: #1f1200; }
+.calendar-day--onrequest {
+  background: transparent;
+  border: 1.5px dashed var(--sun);
+  color: var(--text);
+}
+.calendar-day--selected { background: var(--sun); color: #1f1200; border-color: var(--sun); }
 .calendar-day--today:not(.calendar-day--selected)::after {
   content: "";
   position: absolute;
@@ -663,6 +668,7 @@ body.nav-open .nav-toggle span:nth-child(3) { transform: translateY(-7px) rotate
 .calendar-legend span { display: flex; align-items: center; gap: 6px; }
 .cal-dot { width: 9px; height: 9px; border-radius: 50%; display: inline-block; }
 .cal-dot--free { background: var(--chip-bg); border: 1.5px solid var(--accent); }
+.cal-dot--onrequest { background: transparent; border: 1.5px dashed var(--sun); }
 .cal-dot--booked { background: var(--text-faint); }
 .cal-dot--closed { background: transparent; border: 1.5px solid var(--text-faint); }
 
