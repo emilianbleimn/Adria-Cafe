@@ -1,5 +1,5 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
-  <rect width="64" height="64" rx="16" fill="#ebf5fe"/>
-  <text x="17" y="42" font-family="Poppins, Arial, sans-serif" font-weight="800" font-size="28" fill="#0081f8" text-anchor="middle">E</text>
-  <text x="42" y="42" font-family="Poppins, Arial, sans-serif" font-weight="800" font-size="28" fill="#fd5e01" text-anchor="middle">B</text>
+  <rect width="64" height="64" rx="16" fill="#172737"/>
+  <text x="17" y="42" font-family="Poppins, Arial, sans-serif" font-weight="800" font-size="28" fill="#98caef" text-anchor="middle">E</text>
+  <text x="42" y="42" font-family="Poppins, Arial, sans-serif" font-weight="800" font-size="28" fill="#f6f3ee" text-anchor="middle">B</text>
 </svg>

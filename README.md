@@ -71,12 +71,11 @@ python3 -m http.server 8000
 
 ## Farbkonzept
 
-Direkt aus dem Logo übernommen:
+Direkt aus dem Logo übernommen — Baby-Blau & Cremeweiß, modern und "splashy":
 
-- **Blau** `#0081f8` (Wasser, Vertrauen, Professionalität) als Hauptfarbe
-- **Kräftiges Orange** `#fd5e01` als Akzent für Buttons & Call-to-Actions
-  (steht bewusst im Kontrast zum Blau — wirkt einladend und "locker")
-- **Weiß & helles Blaugrau** für ruhige, aufgeräumte Flächen
+- **Baby-Blau** `#98caef` als verspielter Akzent für Buttons, Blobs & Icons
+- **Navy** `#172737` (aus dem Logo-Hintergrund) für Überschriften & Text
+- **Cremeweiß** `#f6f3ee` als warmer, ruhiger Seitenhintergrund statt reinem Weiß
 
 ## Hinweis zu Inhalten
 

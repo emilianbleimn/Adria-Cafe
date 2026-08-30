@@ -87,8 +87,8 @@ der Rest der Seite zieht automatisch nach.
    👉 https://github.com/emilianbleimn/Adria-Cafe/edit/claude/eb-hochdruckreinigung-site-jl42wf/css/style.css
 2. Falls GitHub fragt: oben rechts **„Sign in"** und einloggen.
 3. Ganz oben siehst du den Block `:root {` mit den Farben (Zeilen 6–30).
-4. Einen Wert ändern, z. B. das Blau:
-   `--blue: #0081f8;`  →  z. B.  `--blue: #1177c2;`
+4. Einen Wert ändern, z. B. das Baby-Blau:
+   `--blue-bright: #98caef;`  →  z. B.  `--blue-bright: #b3d9f5;`
    (neue Farbcodes findest du hier: https://htmlcolorcodes.com/color-picker/ — den `#…`-Code kopieren)
 5. Oben rechts den grünen Knopf **„Commit changes…"** klicken → nochmal **„Commit changes"** bestätigen. ✅
 6. Nach 1–2 Minuten die **Live-Vorschau** neu laden (Strg+F5).
@@ -96,11 +96,13 @@ der Rest der Seite zieht automatisch nach.
 ### Farb-Spickzettel
 | Variable | Bedeutung |
 |---|---|
-| `--blue-deep` | Dunkles Blau – Header-Text, Überschriften |
-| `--blue` / `--blue-bright` | Hauptblau – Hero-Hintergrund, Icons, Akzente |
-| `--blue-pale` / `--sky` | Helles Blau – Hintergrundflächen |
-| `--sun` / `--sun-2` | Kräftiges Orange (Logo-Farbe) – Buttons & Call-to-Actions |
-| `--mint` | Frisches Grün – kleine Akzente |
+| `--blue-deep` | Navy – Überschriften, dunkler Text |
+| `--blue` | Lesbares Mittelblau – Icons, Links, kleine Akzente |
+| `--blue-bright` | Baby-Blau (Logo-Farbe) – Buttons, Blobs, "Splash"-Flächen |
+| `--blue-pale` / `--sky` | Sehr helles Blau – Hintergrundflächen |
+| `--cream` / `--cream-alt` | Cremeweiß – Seitenhintergrund statt reinem Weiß |
+| `--mint` | Frisches Grün – Erfolgsmeldungen |
+| `--danger` | Rot – Fehlermeldungen im Formular |
 | `--ink` | Textfarbe |
 
 ---
