@@ -407,6 +407,16 @@ body.nav-open .nav-toggle span:nth-child(3) { transform: translateY(-7px) rotate
 .services-note a { color: var(--accent); font-weight: 600; text-decoration: underline; }
 
 /* ---------- Price card ---------- */
+.price-cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: stretch;
+  gap: 26px;
+  max-width: 920px;
+  margin: 0 auto;
+}
+.price-cards .price-card { flex: 1 1 320px; max-width: 420px; margin: 0; }
 .price-card {
   max-width: 560px;
   margin: 0 auto;
@@ -416,6 +426,9 @@ body.nav-open .nav-toggle span:nth-child(3) { transform: translateY(-7px) rotate
   border-radius: var(--radius);
   padding: 44px 34px;
   box-shadow: var(--shadow-sm);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   transition: background-color 0.3s var(--ease), border-color 0.3s var(--ease);
 }
 .price-card-tag {
@@ -450,6 +463,7 @@ body.nav-open .nav-toggle span:nth-child(3) { transform: translateY(-7px) rotate
   max-width: 44ch;
   margin: 0 auto 28px;
 }
+.price-cards .price-card-note { margin-top: auto; }
 
 /* ---------- Before / After slider ---------- */
 .ba-slider {
