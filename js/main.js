@@ -191,6 +191,34 @@
       (isSaturday ? " (Samstag nur auf Anfrage — ich bestätige, sobald ich Zeit habe)" : "");
   }
 
+  function updateTimeOptions(isSaturday) {
+    if (!cfSlot) return;
+    var previousValue = cfSlot.value;
+    var times = isSaturday ? ["12:00 Uhr"] : ["10:00 Uhr", "16:00 Uhr"];
+
+    cfSlot.innerHTML = "";
+    var placeholder = document.createElement("option");
+    placeholder.value = "";
+    placeholder.disabled = true;
+    placeholder.textContent = "Bitte wählen …";
+    cfSlot.appendChild(placeholder);
+
+    times.forEach(function (t) {
+      var opt = document.createElement("option");
+      opt.value = t;
+      opt.textContent = t;
+      cfSlot.appendChild(opt);
+    });
+
+    if (times.indexOf(previousValue) !== -1) {
+      cfSlot.value = previousValue;
+      selectedSlot = previousValue;
+    } else {
+      placeholder.selected = true;
+      selectedSlot = "";
+    }
+  }
+
   if (cfSlot) {
     cfSlot.addEventListener("change", function () {
       selectedSlot = cfSlot.value;
@@ -255,6 +283,8 @@
           btn.addEventListener("click", function () {
             selectedDateStr = this.getAttribute("data-iso");
             if (cfTermin) cfTermin.value = selectedDateStr;
+            var clickedDay = new Date(selectedDateStr + "T00:00:00").getDay();
+            updateTimeOptions(clickedDay === 6);
             updateSelectedText();
             renderCalendar();
           });
@@ -332,7 +362,7 @@
         return;
       }
       if (!selectedSlot) {
-        setStatus("Bitte noch eine Uhrzeit auswählen (10–14 Uhr oder 16–20 Uhr).", "is-error");
+        setStatus("Bitte noch eine Uhrzeit auswählen.", "is-error");
         return;
       }
 
@@ -355,6 +385,7 @@
             if (cfTermin) cfTermin.value = "";
             selectedDateStr = "";
             selectedSlot = "";
+            updateTimeOptions(false);
             updateSelectedText();
             refreshCalendar();
           } else {
