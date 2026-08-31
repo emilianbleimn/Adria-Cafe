@@ -1,41 +1,40 @@
-# Eiscafé Adria — Website
+# EB-Hochdruckreinigung — Website
 
-Eine elegante, professionelle One-Page-Website für das **Eiscafé Adria** in
-Erbach im Odenwald – hausgemachte italienische Eisspezialitäten, Kuchen,
-Waffeln, Crêpes sowie mediterrane Küche.
+Eine professionelle, aber entspannte One-Page-Website für
+**EB-Hochdruckreinigung** (Emilian Bleim) — Reinigung von Einfahrten,
+Terrassen, Gehwegen und allen befestigten Bodenflächen rund ums Haus.
 
-## Über das Café
+## Über den Betrieb
 
-- **Adresse:** Werner-von-Siemens-Straße 8, 64711 Erbach im Odenwald
-- **Telefon:** 06062 41 68
-- **E-Mail:** cafe-adria@t-online.de
-- **Öffnungszeiten:** Mo–Sa 9:00–23:00 Uhr · So & Feiertage 10:00–23:00 Uhr
-- **Betrieb:** Familienbetrieb (Frare & Tavian GbR)
+- **Leistungen:** Einfahrten, Terrassen (Stein, Fliesen, Holz), Gehwege &
+  Hofeinfahrten, Pflaster- & Hofflächen, Poolumrandungen & Gartenwege,
+  Garagenvorplätze, Mülltonnenreinigung
+- **Kontaktdaten, Einzugsgebiet & Öffnungszeiten:** aktuell als Platzhalter
+  hinterlegt (`[Telefonnummer eintragen]`, `[E-Mail eintragen]`,
+  `Region [Stadt] & Umgebung`) — bitte vor Veröffentlichung ausfüllen,
+  siehe `ANLEITUNG.md`.
 
 ## Aufbau der Website
 
-Die Seite ist vollständig statisch und **ohne externe Bild-Abhängigkeiten**
-gestaltet – alle Illustrationen sind als handgefertigte SVG- und CSS-Grafiken
-eingebettet. So lädt die Seite überall schnell und zuverlässig.
+Bewusst als **kompakte, kurze Landingpage** gehalten — kein langes Scrollen,
+direkt zum Buchen. Logo und Vorher/Nachher-Fotos liegen als Bilddateien in
+`assets/`, keine weiteren externen Abhängigkeiten.
 
-| Abschnitt        | Inhalt                                                        |
-|------------------|---------------------------------------------------------------|
-| Hero             | Begrüßung, Kernbotschaft, Eckdaten                            |
-| Highlights       | Hausgemachtes Eis · Patisserie · Küche · Terrasse            |
-| Tradition        | Geschichte des Familienbetriebs                              |
-| Spezialitäten    | Übersicht des kulinarischen Angebots                         |
-| Karte            | Auszug aus der Speisekarte                                   |
-| Impressionen     | Stimmungsvolle Galerie                                       |
-| Erbach           | Lage in der historischen Altstadt + Karte                   |
-| Kontakt          | Öffnungszeiten, Adresse, Live-„Geöffnet"-Anzeige            |
+| Abschnitt        | Inhalt                                                          |
+|------------------|-------------------------------------------------------------------|
+| Hero             | Kernbotschaft, CTA "Jetzt Termin buchen", Vertrauens-Badges, Vorher/Nachher-Mini-Vorschau |
+| Leistungen       | Kurze Liste aller angebotenen Flächen & Mülltonnenreinigung       |
+| Preise           | Zwei Preiskarten: 2,50 €/m² für Flächen, 6 €/Tonne für Mülltonnen |
+| Kontakt/Buchung  | Kalender mit freien/belegten Tagen + Formular mit Foto-Upload     |
 
 ## Dateien
 
 ```
-index.html        – Struktur & Inhalt
-css/style.css     – Design-System (Farben, Typografie, Layout, Responsive)
-js/main.js        – Navigation, Scroll-Animationen, Öffnungs-Status
+index.html         – Struktur & Inhalt
+css/style.css       – Design-System (Farben, Typografie, Layout, Responsive)
+js/main.js          – Navigation, Kalender, Foto-Vorschau, Formularversand
 assets/favicon.svg
+assets/logo-eb.png
 ```
 
 ## Lokal ansehen
@@ -52,20 +51,31 @@ python3 -m http.server 8000
 
 - Reines HTML5, CSS3 und Vanilla JavaScript – keine Frameworks, keine Build-Tools
 - Responsives Layout (Desktop, Tablet, Mobil)
-- Schriften: *Bodoni Moda* & *Archivo* (Google Fonts)
-- Strukturierte Daten (schema.org `IceCreamShop`) für Suchmaschinen
+- Schriften: *Poppins* & *Inter* (Google Fonts)
+- Strukturierte Daten (schema.org `CleaningService`) für Suchmaschinen
 - Berücksichtigt `prefers-reduced-motion`
+- **Buchungskalender**: zeigt freie/belegte Tage direkt im Browser,
+  Sonntag gilt automatisch als geschlossen, Samstag als "auf Anfrage".
+  Belegte Tage werden in `js/main.js` in einer einfachen Liste gepflegt (kein Backend, kein
+  Login) — siehe `ANLEITUNG.md`.
+- **Kontakt-/Buchungsformular mit Foto-Upload** über den kostenlosen
+  Dienst [Web3Forms](https://web3forms.com) (unterstützt Datei-Anhänge,
+  die mailto-Links technisch nicht können) — braucht einen kostenlosen
+  Access Key, siehe `ANLEITUNG.md`.
+- Umschaltbarer **Hell-/Dunkelmodus** (Button oben rechts im Menü) — merkt
+  sich die Wahl im Browser und folgt sonst der Systemeinstellung
 
-## Bilder
+## Farbkonzept
 
-Die verwendeten Fotos stammen als lizenzfreie Platzhalter von
-[Unsplash](https://unsplash.com) (kostenlose, kommerziell nutzbare Lizenz)
-und liegen unter `assets/img/`. Für den finalen Auftritt empfiehlt es sich,
-sie durch eigene Aufnahmen des Eiscafé Adria zu ersetzen – einfach die
-Dateien gleichen Namens austauschen.
+Direkt aus dem Logo übernommen — Baby-Blau & Cremeweiß, modern und "splashy":
+
+- **Baby-Blau** `#98caef` als verspielter Akzent für Buttons, Blobs & Icons
+- **Navy** `#172737` (aus dem Logo-Hintergrund) für Überschriften & Text
+- **Cremeweiß** `#f6f3ee` als warmer, ruhiger Seitenhintergrund statt reinem Weiß
 
 ## Hinweis zu Inhalten
 
-Texte und Eckdaten basieren auf öffentlich verfügbaren Informationen.
-Die Preise und Gerichte in der Karte sind beispielhaft und sollten vor
-Veröffentlichung mit dem aktuellen Angebot des Cafés abgeglichen werden.
+Texte sind beispielhaft und professionell, aber locker formuliert. Alle
+Platzhalter (Telefonnummer, E-Mail, Region, Impressum/Datenschutz-Links)
+müssen vor dem Livegang noch mit echten Angaben gefüllt werden — siehe
+`ANLEITUNG.md`.
