@@ -93,48 +93,6 @@
   var yearEl = document.getElementById("year");
   if (yearEl) yearEl.textContent = String(new Date().getFullYear());
 
-  /* ---------- Before / after slider ---------- */
-  var baSlider = document.getElementById("baSlider");
-  var baBefore = document.getElementById("baBefore");
-  var baHandle = document.getElementById("baHandle");
-
-  if (baSlider && baBefore && baHandle) {
-    var dragging = false;
-
-    function setPosition(percent) {
-      percent = Math.min(100, Math.max(0, percent));
-      baBefore.style.clipPath = "inset(0 " + (100 - percent) + "% 0 0)";
-      baHandle.style.left = percent + "%";
-      baHandle.setAttribute("aria-valuenow", String(Math.round(percent)));
-    }
-
-    function positionFromClientX(clientX) {
-      var rect = baSlider.getBoundingClientRect();
-      var percent = ((clientX - rect.left) / rect.width) * 100;
-      setPosition(percent);
-    }
-
-    baSlider.addEventListener("pointerdown", function (e) {
-      dragging = true;
-      baSlider.setPointerCapture(e.pointerId);
-      positionFromClientX(e.clientX);
-    });
-    baSlider.addEventListener("pointermove", function (e) {
-      if (!dragging) return;
-      positionFromClientX(e.clientX);
-    });
-    baSlider.addEventListener("pointerup", function () { dragging = false; });
-    baSlider.addEventListener("pointercancel", function () { dragging = false; });
-
-    baHandle.addEventListener("keydown", function (e) {
-      var current = parseFloat(baHandle.getAttribute("aria-valuenow")) || 50;
-      if (e.key === "ArrowLeft") { setPosition(current - 5); e.preventDefault(); }
-      if (e.key === "ArrowRight") { setPosition(current + 5); e.preventDefault(); }
-    });
-
-    setPosition(50);
-  }
-
   /* ---------- Booking calendar ----------
      Belegte Tage hier eintragen (Format "JJJJ-MM-TT"), z. B.:
      var BLOCKED_DATES = ["2026-07-14", "2026-07-15"];

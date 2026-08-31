@@ -8,7 +8,7 @@ Terrassen, Gehwegen und allen befestigten Bodenflächen rund ums Haus.
 
 - **Leistungen:** Einfahrten, Terrassen (Stein, Fliesen, Holz), Gehwege &
   Hofeinfahrten, Pflaster- & Hofflächen, Poolumrandungen & Gartenwege,
-  Garagenvorplätze
+  Garagenvorplätze, Mülltonnenreinigung
 - **Kontaktdaten, Einzugsgebiet & Öffnungszeiten:** aktuell als Platzhalter
   hinterlegt (`[Telefonnummer eintragen]`, `[E-Mail eintragen]`,
   `Region [Stadt] & Umgebung`) — bitte vor Veröffentlichung ausfüllen,
@@ -16,20 +16,16 @@ Terrassen, Gehwegen und allen befestigten Bodenflächen rund ums Haus.
 
 ## Aufbau der Website
 
-Die Seite ist vollständig statisch und **ohne externe Bild-Abhängigkeiten**
-gestaltet — alle Grafiken (Logo, Icons, Vorher/Nachher-Vergleich) sind als
-handgefertigte SVG- und CSS-Illustrationen eingebettet. So lädt die Seite
-überall schnell und zuverlässig, ganz ohne Stockfotos.
+Bewusst als **kompakte, kurze Landingpage** gehalten — kein langes Scrollen,
+direkt zum Buchen. Logo und Vorher/Nachher-Fotos liegen als Bilddateien in
+`assets/`, keine weiteren externen Abhängigkeiten.
 
-| Abschnitt        | Inhalt                                                        |
-|------------------|-----------------------------------------------------------------|
-| Hero             | Kernbotschaft, CTA "Jetzt Termin buchen", Vertrauens-Badges     |
-| Leistungen       | 6 Leistungskarten für alle Bodenflächen                        |
-| Preise           | Fester Quadratmeterpreis (2,50 €/m², keine Einschätzung nötig) |
-| Vorher/Nachher   | Interaktiver Schieberegler-Vergleich                           |
-| Ablauf           | 4 Schritte von der Terminwahl bis zum Ergebnis                 |
-| Warum wir        | Ehrliche Vertrauensargumente (junger Betrieb, Einsatz, Preise …) |
-| Kontakt/Buchung  | Kalender mit freien/belegten Tagen + Formular mit Foto-Upload  |
+| Abschnitt        | Inhalt                                                          |
+|------------------|-------------------------------------------------------------------|
+| Hero             | Kernbotschaft, CTA "Jetzt Termin buchen", Vertrauens-Badges, Vorher/Nachher-Mini-Vorschau |
+| Leistungen       | Kurze Liste aller angebotenen Flächen & Mülltonnenreinigung       |
+| Preise           | Zwei Preiskarten: 2,50 €/m² für Flächen, 6 €/Tonne für Mülltonnen |
+| Kontakt/Buchung  | Kalender mit freien/belegten Tagen + Formular mit Foto-Upload     |
 
 ## Dateien
 
